@@ -32,7 +32,7 @@
 
 ---
 
-## EODHD 数据复核(已用 `eodhd_price.py` 实测)
+## 价格数据复核(已用 `price.py` 实测,EODHD provider)
 
 价格层已用 EODHD `eod` 坐实(基本面/市值仍为网页粗估——EODHD 该套餐无 fundamentals)。三点发现:
 

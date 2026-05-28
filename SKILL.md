@@ -58,7 +58,7 @@ description: 给定一个投资主题/趋势,复用交易者 Serenity(@aleabitor
 
 回测依据(11 只光子学标的):首call时多在前6月区间 **86%-237% 高位**入场,之后 **2-6 个月 +150%~+1100%**(中位 ~+277%)。→ **早于主题、容忍不抄底**才是 alpha 来源。
 
-用 `scripts/eodhd_price.py`(可选,需环境变量 `EODHD_API_KEY`;**无 key 时用网页查到的现价/区间替代即可**)取价格上下文(区间位置、距高点、动量、stage 标签),判断当前是"early-uptrend(好)"还是"extended/parabolic(偏晚、小仓或等整理)"。
+**强制**用 `scripts/price.py` 拉真实价格数据(provider 自动回退:**EODHD(`EODHD_API_KEY`)优先 → yfinance 兜底**),输出 6 月区间位置、距高点、近 1/3 月动量、stage 标签。**严禁用 WebSearch 抓价格、严禁凭印象猜"差不多 early/extended"**——猜测视为流程错误。海外股(欧股/台股等)若 yfinance 拿不到,**让用户提供 EODHD key 或换可解析代码后重跑,不要降级为定性**。
 
 ---
 
@@ -80,7 +80,7 @@ description: 给定一个投资主题/趋势,复用交易者 Serenity(@aleabitor
 
 ## 数据来源与边界
 
-- **EODHD(用户套餐 = EOD 历史价档)**:✅ `eod`/`real-time` 全球价格、`search`、`exchange-symbol-list`。用 `scripts/eodhd_price.py`(从环境变量 `EODHD_API_KEY` 读 key,**勿硬编码**)取价格/动量做入场择时。
+- **价格/动量(择时)**:统一走 `scripts/price.py`,provider 自动回退:**① EODHD**(若 `EODHD_API_KEY` 已设,全球覆盖最佳、海外股推荐)→ **② yfinance**(无 key,美股 OK、海外股常 gap)→ **③ 两者都失败 = 报错退出**。Key 从环境变量读、不硬编码。**WebSearch 仅用于公司基本面/定性研究,不用于抓价格**。
 - **EODHD 取不到**:❌ fundamentals(估值/增长/毛利率/市值)、❌ screener、❌ 财报日历 → 这些用 **网页研究**逐只补(财报、财经站、IR)。
 - **瓶颈/单源/产能/客户**等定性判断:靠财报+行业资料+新闻研究。
 

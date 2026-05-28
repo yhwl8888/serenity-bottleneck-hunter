@@ -8,3 +8,9 @@ record_date,theme,eodhd_symbol,name,tier,archetypes,entry_price,currency,entry_s
 2026-05-26,A股半导体,002371.SHE,北方华创,上游咽喉,①,670.25,CNY,extended,观察,半导体设备平台龙头
 2026-05-26,A股半导体,600584.SHG,长电科技,中游卖铲子,④⑧,88.19,CNY,extended(顶),AVOID-chase,先进封装代工龙头-1月+99%已到顶
 2026-05-26,A股半导体,002156.SHE,通富微电,中游卖铲子,④⑧,75.39,CNY,extended,别追,先进封装(供AMD/华为)
+2026-05-28,800VDC电源半导体,AEHR,AEHR,上游设备,⑥⑤,103.82,USD,extended(3m+161%),WAIT-pullback,SiC功率器件burn-in测试+跨光子学复用
+2026-05-28,800VDC电源半导体,NVTS,Navitas,中游卖铲子,④⑧,28.88,USD,extended(1m+91%/3m+204%),AVOID(🚩稀释),GaN+NVDA链已翻倍且亏损+ATM
+2026-05-28,800VDC电源半导体,VICR,Vicor,反面参照,反向,345.84,USD,early-uptrend(临界-ATH附近),AVOID,DC-DC模块龙头但P/E110+ATH+GF高估442%
+2026-05-28,800VDC电源半导体,IPWR,Ideal Power,高风险投机,②⑦⑧,8.99,USD,extended(1m+135%),AVOID-chase,B-TRAN+NVDA Rubin Ultra LOI微盘但已大幅front-run
+2026-05-28,800VDC电源半导体,POWI,Power Integrations,中游卖铲子,④⑧,86.9,USD,extended(at_top98%),WAIT,800V链稳健但区间98%顶点
+2026-05-28,800VDC电源半导体,XFAB.STU,X-FAB,上游咽喉,①⑤⑦⑧⑨,,EUR,PENDING-need-EODHD,PENDING-EODHD,美国唯一高产能SiC代工+EU/US CHIPS Act双背书

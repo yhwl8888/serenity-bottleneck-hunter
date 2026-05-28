@@ -25,12 +25,12 @@ reference/
   methodology.md                 # 方法论(理念/筛选清单/两套择时/回避清单/风险)
   supply-chain-and-archetypes.md # 元框架 + 产业链速查表 + 9 大瓶颈原型库
   example_commercial_space.md    # 完整 worked example(商业航天)
-scripts/eodhd_price.py           # EODHD 价格/动量助手(判断入场 stage)
+scripts/price.py                 # 价格/动量助手(EODHD 优先 → yfinance 兜底,绝不用 WebSearch 猜)
 tracking/                        # 向前(样本外)验证:候选表 + 打分脚本
 ```
 
 ## Data / 数据
-- **Price & timing**: [EODHD](https://eodhd.com) `eod` endpoint (optional). Set `EODHD_API_KEY` (see `.env.example`). Plain price plan is enough; fundamentals are **not** required.
+- **Price & timing**: `scripts/price.py` 自动按 **EODHD(`EODHD_API_KEY`)→ yfinance** 顺序回退。EODHD 全球覆盖最广(海外股推荐);yfinance 无需 key,美股 OK 但非美股常有 gap。**WebSearch 一律不用于抓价格——猜测视为流程错误**。
 - **Fundamentals & bottleneck judgment**: web research per candidate — the skill's real edge is qualitative (is it a true single-source chokepoint?), which no data feed provides.
 
 ## Validation honesty / 验证说明

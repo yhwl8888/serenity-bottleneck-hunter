@@ -1,25 +1,50 @@
-record_date,theme,eodhd_symbol,name,tier,archetypes,entry_price,currency,entry_stage,skill_verdict,thesis
-2026-05-26,商业航天,VNP.TO,5N Plus,上游咽喉,①⑨⑧,47.65,CAD,early-uptrend(已先涨),观察/小仓(非低位),西方少数锗镓铟+AZUR空间太阳能/踩中China出口管制
-2026-05-26,商业航天,MTRN.US,Materion,上游咽喉,①,222.93,USD,early-uptrend(贴顶),观察(非纯play),铍近垄断(反射镜/制导/高超音速)
-2026-05-26,商业航天,RDW.US,Redwire,中游卖铲子,④⑧,22.04,USD,extended/parabolic,AVOID(稀释+抛物线),ROSA太阳能阵/星敏感器但亏损+$3.5亿ATM+1月已+136%
-2026-05-26,A股半导体,688072.SHG,拓荆,上游咽喉,①②⑥,750,CNY,extended,AVOID-chase,混合键合/PECVD设备-韬定律3D直接依赖但1月已+97%
-2026-05-26,A股半导体,688120.SHG,华海清科,上游咽喉,①,294.82,CNY,extended(hot),别追/观察,CMP减薄设备-3D堆叠必需-国产近垄断
-2026-05-26,A股半导体,688012.SHG,中微,上游咽喉,①⑥,463.51,CNY,early-uptrend(区间75%相对没那么顶),观察,刻蚀设备国产替代
-2026-05-26,A股半导体,002371.SHE,北方华创,上游咽喉,①,670.25,CNY,extended,观察,半导体设备平台龙头
-2026-05-26,A股半导体,600584.SHG,长电科技,中游卖铲子,④⑧,88.19,CNY,extended(顶),AVOID-chase,先进封装代工龙头-1月+99%已到顶
-2026-05-26,A股半导体,002156.SHE,通富微电,中游卖铲子,④⑧,75.39,CNY,extended,别追,先进封装(供AMD/华为)
-2026-05-28,800VDC电源半导体,AEHR,AEHR,上游设备,⑥⑤,103.82,USD,extended(3m+161%),WAIT-pullback,SiC功率器件burn-in测试+跨光子学复用
-2026-05-28,800VDC电源半导体,NVTS,Navitas,中游卖铲子,④⑧,28.88,USD,extended(1m+91%/3m+204%),AVOID(🚩稀释),GaN+NVDA链已翻倍且亏损+ATM
-2026-05-28,800VDC电源半导体,VICR,Vicor,反面参照,反向,345.84,USD,early-uptrend(临界-ATH附近),AVOID,DC-DC模块龙头但P/E110+ATH+GF高估442%
-2026-05-28,800VDC电源半导体,IPWR,Ideal Power,高风险投机,②⑦⑧,8.99,USD,extended(1m+135%),AVOID-chase,B-TRAN+NVDA Rubin Ultra LOI微盘但已大幅front-run
-2026-05-28,800VDC电源半导体,POWI,Power Integrations,中游卖铲子,④⑧,86.9,USD,extended(at_top98%),WAIT,800V链稳健但区间98%顶点
-2026-05-28,800VDC电源半导体,XFAB.PA,X-FAB,上游咽喉,①⑤⑦⑧⑨,12,EUR,extended(1m+77.9%/3m+155.4%),🟡观望[trigger:回€8-9或CHIPS资金落地或SiC利用率≥85%],美国唯一高产能SiC代工+EU/US CHIPS Act双背书但已被大幅front-run
-2026-05-28,800VDC电源半导体,STM.US,STMicroelectronics,上游咽喉,①⑤⑧⑨,67.75,USD,early-uptrend(1m+36%/3m+97%/rng93%),🟢候选[Serenity风格模式A近完美setup],SiC综合第一+800V模块+EU CHIPS Act 2受益+无ATM稀释/v1广扫不够漏掉
-2026-05-28,800VDC电源半导体,WOLF.US,Wolfspeed,上游咽喉,①⑥⑨,63.26,USD,extended(1m+144.7%/3m+213%),🟡观望[trigger:回$40或下季营收/产能/现金跑道任一指标符合预期],美国SiC wafer近垄断+新管理层资本重组+150mm→200mm转产/重组后是NewCo独立评估
-2026-05-28,800VDC电源半导体,ON.US,onsemi,上游咽喉,①⑧,124.89,USD,extended(rng95%+3m+83%),🟡观望[trigger:回$100+汽车SiC需求面无实质受损],SiC综合第二+自家fab+Treo 800V平台
-2026-05-28,800VDC电源半导体,IFX.DE,Infineon,中游器件,⑧,78.66,EUR,extended(1m刚过40%阈值+rng97%),🟡观望[trigger:回€70+数据中心订单visibility],SiC+GaN综合+与NVDA联合开发800V
-2026-05-28,800VDC电源半导体,MPWR.US,Monolithic Power,中游卖铲子,④,1620.17,USD,early(1m+8%/3m+37%但rng89%),🟡观望[trigger:800V子项营收占比可量化≥10%],高效率buck/boost电源管理弹性大但非纯800V
-2026-05-28,800VDC电源半导体,VRT.US,Vertiv,中游系统,④⑧,319.78,USD,early(1m+5%/3m+23%温和),🟡观望[trigger:800V产品线营收/订单visibility明确],数据中心电源系统集成(液冷+UPS+PDU)
-2026-05-28,800VDC电源半导体,ETN.US,Eaton,中游系统,④,406.37,USD,early(1m-2%/3m+9%横盘),🟡观望[trigger:800V数据中心营收占比可量化],电气基础设施(数据中心配电)弹性小
-2026-05-28,800VDC电源半导体,NVDA.US,NVIDIA,下游对照,排除,212.60,USD,early(横盘),🔴排除[非Serenity风格猎物-下游巨头失⑦前机构关],下游GPU龙头-市值4T+/已被全市场覆盖
-2026-05-28,800VDC电源半导体,AVGO.US,Broadcom,下游对照,排除,421.86,USD,early(1m+5%/3m+31%温和),🔴排除[非Serenity风格猎物-下游巨头失⑦前机构关],下游定制ASIC-MC过大
+﻿"record_date","theme","eodhd_symbol","name","tier","archetypes","entry_price","currency","entry_stage","skill_verdict","thesis"
+"2026-05-26","商业航天","VNP.TO","5N Plus","上游咽喉","①⑨⑧","47.65","CAD","early-uptrend(已先涨)","观察/小仓(非低位)","西方少数锗镓铟+AZUR空间太阳能/踩中China出口管制"
+"2026-05-26","商业航天","MTRN.US","Materion","上游咽喉","①","222.93","USD","early-uptrend(贴顶)","观察(非纯play)","铍近垄断(反射镜/制导/高超音速)"
+"2026-05-26","商业航天","RDW.US","Redwire","中游卖铲子","④⑧","22.04","USD","extended/parabolic","AVOID(稀释+抛物线)","ROSA太阳能阵/星敏感器但亏损+$3.5亿ATM+1月已+136%"
+"2026-05-26","A股半导体","688072.SHG","拓荆","上游咽喉","①②⑥","750","CNY","extended","AVOID-chase","混合键合/PECVD设备-韬定律3D直接依赖但1月已+97%"
+"2026-05-26","A股半导体","688120.SHG","华海清科","上游咽喉","①","294.82","CNY","extended(hot)","别追/观察","CMP减薄设备-3D堆叠必需-国产近垄断"
+"2026-05-26","A股半导体","688012.SHG","中微","上游咽喉","①⑥","463.51","CNY","early-uptrend(区间75%相对没那么顶)","观察","刻蚀设备国产替代"
+"2026-05-26","A股半导体","002371.SHE","北方华创","上游咽喉","①","670.25","CNY","extended","观察","半导体设备平台龙头"
+"2026-05-26","A股半导体","600584.SHG","长电科技","中游卖铲子","④⑧","88.19","CNY","extended(顶)","AVOID-chase","先进封装代工龙头-1月+99%已到顶"
+"2026-05-26","A股半导体","002156.SHE","通富微电","中游卖铲子","④⑧","75.39","CNY","extended","别追","先进封装(供AMD/华为)"
+"2026-05-28","800VDC电源半导体","AEHR.US","AEHR","上游设备","⑥⑤","103.82","USD","extended(3m+161%)","WAIT-pullback","SiC功率器件burn-in测试+跨光子学复用"
+"2026-05-28","800VDC电源半导体","NVTS.US","Navitas","中游卖铲子","④⑧","28.88","USD","extended(1m+91%/3m+204%)","AVOID(🚩稀释)","GaN+NVDA链已翻倍且亏损+ATM"
+"2026-05-28","800VDC电源半导体","VICR.US","Vicor","反面参照","反向","345.84","USD","early-uptrend(临界-ATH附近)","AVOID","DC-DC模块龙头但P/E110+ATH+GF高估442%"
+"2026-05-28","800VDC电源半导体","IPWR.US","Ideal Power","高风险投机","②⑦⑧","8.99","USD","extended(1m+135%)","AVOID-chase","B-TRAN+NVDA Rubin Ultra LOI微盘但已大幅front-run"
+"2026-05-28","800VDC电源半导体","POWI.US","Power Integrations","中游卖铲子","④⑧","86.9","USD","extended(at_top98%)","WAIT","800V链稳健但区间98%顶点"
+"2026-05-28","800VDC电源半导体","XFAB.PA","X-FAB","上游咽喉","①⑤⑦⑧⑨","12","EUR","extended(1m+77.9%/3m+155.4%)","🟡观望[trigger:回€8-9或CHIPS资金落地或SiC利用率≥85%]","美国唯一高产能SiC代工+EU/US CHIPS Act双背书但已被大幅front-run"
+"2026-05-28","800VDC电源半导体","STM.US","STMicroelectronics","上游咽喉","①⑤⑧⑨","67.75","USD","early-uptrend(1m+36%/3m+97%/rng93%)","🟢候选[Serenity风格模式A近完美setup]","SiC综合第一+800V模块+EU CHIPS Act 2受益+无ATM稀释/v1广扫不够漏掉"
+"2026-05-28","800VDC电源半导体","WOLF.US","Wolfspeed","上游咽喉","①⑥⑨","63.26","USD","extended(1m+144.7%/3m+213%)","🟡观望[trigger:回$40或下季营收/产能/现金跑道任一指标符合预期]","美国SiC wafer近垄断+新管理层资本重组+150mm→200mm转产/重组后是NewCo独立评估"
+"2026-05-28","800VDC电源半导体","ON.US","onsemi","上游咽喉","①⑧","124.89","USD","extended(rng95%+3m+83%)","🟡观望[trigger:回$100+汽车SiC需求面无实质受损]","SiC综合第二+自家fab+Treo 800V平台"
+"2026-05-28","800VDC电源半导体","IFX.DE","Infineon","中游器件","⑧","78.66","EUR","extended(1m刚过40%阈值+rng97%)","🟡观望[trigger:回€70+数据中心订单visibility]","SiC+GaN综合+与NVDA联合开发800V"
+"2026-05-28","800VDC电源半导体","MPWR.US","Monolithic Power","中游卖铲子","④","1620.17","USD","early(1m+8%/3m+37%但rng89%)","🟡观望[trigger:800V子项营收占比可量化≥10%]","高效率buck/boost电源管理弹性大但非纯800V"
+"2026-05-28","800VDC电源半导体","VRT.US","Vertiv","中游系统","④⑧","319.78","USD","early(1m+5%/3m+23%温和)","🟡观望[trigger:800V产品线营收/订单visibility明确]","数据中心电源系统集成(液冷+UPS+PDU)"
+"2026-05-28","800VDC电源半导体","ETN.US","Eaton","中游系统","④","406.37","USD","early(1m-2%/3m+9%横盘)","🟡观望[trigger:800V数据中心营收占比可量化]","电气基础设施(数据中心配电)弹性小"
+"2026-05-28","800VDC电源半导体","NVDA.US","NVIDIA","下游对照","排除","212.60","USD","early(横盘)","🔴排除[非Serenity风格猎物-下游巨头失⑦前机构关]","下游GPU龙头-市值4T+/已被全市场覆盖"
+"2026-05-28","800VDC电源半导体","AVGO.US","Broadcom","下游对照","排除","421.86","USD","early(1m+5%/3m+31%温和)","🔴排除[非Serenity风格猎物-下游巨头失⑦前机构关]","下游定制ASIC-MC过大"
+"2026-05-31","MLCC","300285.SHE","国瓷材料Sinocera","上游咽喉","①⑦⑧","50.78","CNY","early-uptrend(rng86%/1m+37%/3m+39%)","🟢候选[模式A早期上行+全球第二介质粉+三星电机第一供应商+高端满产排到4-6月]","MLCC介质粉(钛酸钡)中国80-90%/全球#2-AI服务器+车规放量"
+"2026-05-31","MLCC","605376.SHG","博迁新材Boqian","上游咽喉","①②④","178.33","CNY","extended(1m+45%/3m+54%)","🟡观望[trigger:回¥130-140或下季高端镍粉出货占比+毛利率]","纳米镍粉≤120nm全球领跑+4年长协-但已抛物线"
+"2026-05-31","MLCC","4078.T","Sakai Chemical","上游咽喉","①⑦","4940","JPY","early-uptrend但贴6月顶(rng100%/1m+39%/3m+22%)","🟡观望[trigger:回¥4000附近或财报高端粉营收占比]","全球钛酸钡#1(25-30%)水热法-已到顶+东京所不在EODHD仅yfinance取价"
+"2026-05-31","MLCC","4092.T","Nippon Chemical Ind","上游咽喉","①","4870","JPY","extended(1m+51%/3m+38%)","🟡观望[trigger:回调-20%或财报]","钛酸钡全球~15%-日股yfinance"
+"2026-05-31","MLCC","5727.T","Toho Titanium","上游咽喉","①","2811","JPY","range/basing(off-31%/<SMA50/1m-13%)","🟡观望[trigger:站回SMA50+高端镍粉营收占比可量化]","超细镍粉主力但钛海绵为主业非纯MLCC-唯一已回调的上游名"
+"2026-05-31","MLCC","002859.SHE","洁美科技Jmei","中游卖铲子","④⑥","69.2","CNY","extended(1m+42%/3m+62%)","🟡观望[trigger:回¥55或村田/三星离型膜从小批试用转规模订单]","MLCC离型膜/载带国产替代-纸质载带全球#1但高端离型膜仍验证期"
+"2026-05-31","MLCC","300806.SHE","斯迪克Sidike","中游卖铲子","④⑥","76.12","CNY","early-uptrend(rng76%/off-18%/1m+5.7%/3m+39%)","🟡观望[trigger:MLCC离型膜营收占比可量化≥X或站稳]","离型膜国产替代-相对没那么顶但题材纯度弱于洁美"
+"2026-05-31","MLCC","7966.T","Lintec","中游卖铲子","④⑥","5750","JPY","early-uptrend贴顶(1m+16%/3m+7%)","🟡观望[trigger:回调]","离型膜全球龙头业务分散-日股yfinance/EODHD仅德国57T.F"
+"2026-05-31","MLCC","6981.T","村田Murata","下游对照/成品龙头","排除","9625","JPY","extended/parabolic(1m+96%/3m+128%)","🔴跳过[非本框架猎物-成品龙头已全市场覆盖+抛物线]","MLCC成品全球龙头-垂直整合自制材料/设备"
+"2026-05-31","MLCC","000636.SHE","风华高科Fenghua","下游对照/成品龙头","排除","53.03","CNY","extended/parabolic(1m+117%/3m+106%)","🔴跳过[成品龙头+1月+117%抛物线]","A股MLCC成品龙头"
+"2026-05-31","MLCC美股","KN.US","Knowles","中游特种","④","37.41","USD","early-uptrend(rng93%/1m+19.9%/3m+35.5%)","🟢候选[美股最佳择时-特种高可靠陶瓷电容但非隐藏瓶颈+GF高估40.7%-仓位克制]","高可靠陶瓷电容(医疗/国防/半导设备)Q1精密器件+17%"
+"2026-05-31","MLCC美股","VSH.US","Vishay","中游宽线","④⑤","52.05","USD","extended/parabolic(1m+79.7%/3m+171.8%/YTD+185%)","🟡观望[trigger:回$40出头]","最直接AI-MLCC受益+远期PE14.6x便宜+积压+21%至$1.6B但已抛物线"
+"2026-05-31","MLCC美股","KYOCY.US","京瓷Kyocera ADR","中游成品(多元)","④⑧","22.12","USD","early-uptrend(rng93%/1m+27.9%/3m+26%)","🟡观望[trigger:AVX-MLCC营收占比可量化]","含KyoceraAVX(AI GPU板低-ESL MLCC扩产一倍)但巨型多元集团摊薄"
+"2026-05-31","MLCC美股","CTS.US","CTS Corp","中游(纯度弱)","④","64.21","USD","early-uptrend(rng93%/1m+12.5%/3m+23.6%)","🟡观望[trigger:MLCC营收占比]","陶瓷元件多元(压电/传感器)-MLCC纯度弱搭便车"
+"2026-05-31","MLCC美股","TTDKY.US","TDK ADR","下游成品龙头","排除","25.91","USD","extended(rng98%/1m+40.5%/3m+74.9%)","🟡观望[trigger:深度回调]","MLCC+HDD磁头+电池成品龙头-贴顶"
+"2026-05-31","MLCC美股","MRAAY.US","村田Murata ADR","下游成品龙头","排除","31.7","USD","extended/parabolic(1m+89.3%/3m+147.3%)","🔴跳过[成品龙头抛物线]","MLCC全球#1垂直整合自制材料设备"
+"2026-01-02","光子学","AXTI.US","AXT Inc","上游咽喉","①⑨","16.76","USD","historical-seed","🟢历史种子[Serenity首call验证]","InP衬底40%供应+光子学链"
+"2026-01-02","光子学","SIVE.ST","Sivers Semiconductors","上游咽喉","①⑦","4.28","SEK","historical-seed","🟢历史种子[Serenity首call验证]","SiPh设计/InP收发器"
+"2026-01-02","光子学","LITE.US","Lumentum","中游卖铲子","④⑧","386.11","USD","historical-seed","🟢历史种子[Serenity首call验证]","进每个超大规模厂商ASIC的BOM"
+"2026-01-02","光子学","TSEM.US","Tower Semi","上游咽喉","①③","121.74","USD","historical-seed","🟢历史种子[Serenity首call验证]","光子学界的台积电-70%产能锁到2028"
+"2026-01-02","光子学","SOI.PA","Soitec","上游咽喉","①②","24.87","EUR","historical-seed","🟢历史种子[Serenity首call验证]","SOI/CPO衬底近垄断"
+"2026-01-02","光子学","IQE.LSE","IQE plc","上游咽喉","①","5.15","GBX","historical-seed","🟢历史种子[Serenity首call验证]","化合物半导体外延+Ge供应商"
+"2026-01-02","光子学","AEHR.US","AEHR Test","上游设备","⑥⑤","22.16","USD","historical-seed","🟢历史种子[Serenity首call验证]","光子器件测试设备+跨SiC复用"
+"2026-01-02","AI算力","NBIS.US","Nebius","中游卖铲子","④⑦⑧","89.95","USD","historical-seed","🟢历史种子[Serenity首call验证]","GPU算力出租+MSFT170亿合同"
+"2026-01-02","商业航天","RKLB.US","Rocket Lab","中游卖铲子","④⑧","75.99","USD","historical-seed","🟢历史种子[Serenity首call验证]","发射+总包(偏Evolution而非Bottleneck)"

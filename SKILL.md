@@ -38,10 +38,16 @@ description: 给定一个投资主题/趋势,复用交易者 Serenity(@aleabitor
 - **别只押"最上游材料咽喉(①②)"**:也要纳入"普适器件/卖铲子供应商(④)"——两档都列,避免选股偏科。
 - **最纯的瓶颈常在海外/OTC**(如 5N Plus 在 TSX、Umicore 在布鲁塞尔)→ 主动去海外交易所找,并注明流动性/准入限制。
 - **若瓶颈落在私有公司、或大公司的一个部门**(如 AZUR 在 5N+ 内、SolAero 在 RKLB 内、Spectrolab 在 Boeing 内、rad-hard 纯 play VORAGO 私有)→ 必须给"暴露路径":买含该业务的母公司(说明稀释/纯度),或如实标注"无干净纯 play、跳过"。**不要硬凑一个不纯的标的来充数。**
+- **跨主题节点检查(强制,2026-06-01 加,对应 Serenity ⑤跨 capex cycle 原型)**:产出候选后立即跑 `python tracking/cross_theme_scan.py`,把当前候选名单与历史 `forward_picks.csv` 对照 ——
+  - 同一只 symbol 同时出现在 ≥2 个主题 = **⭐**;≥3 个 = **⭐⭐**(罕见,真"非线性定价权")。
+  - **档位过滤防止巨头摊薄误标**:中游系统/下游对照/反面参照不计入;中游卖铲子档必须有 ④ 普适才计入(避免 STM/NVDA/Vertiv 因业务摊薄被假高亮)。
+  - ⭐ 节点在 Step 5"前机构"闸门**自动加分**(被多个 capex cycle 同时驱动 = 即使有机构覆盖,产能压力是叠加的、仍可能 mispriced)。
+  - 已验证案例(2026-06-01 首测):**AEHR.US 跨光子学 + 800VDC 双主题** = ⭐(都是上游设备 ⑥⑤,跨 capex cycle 真实存在)。
+  - **eodhd_symbol 规范**:美股一律带 `.US` 后缀(`AEHR.US` 而非 `AEHR`),否则脚本无法匹配同一只。
 
 **Step 5 · 三道闸门逐一检验**
 - 🔒 真瓶颈:产能受限/有定价权/短期无法绕过("别人能 1-2 年内绕过吗?")
-- 👁️ 前机构:卖方研报少、机构持仓低、市值小
+- 👁️ 前机构:卖方研报少、机构持仓低、市值小;**⭐ 跨主题节点自动加分**(被多个 capex 同时锁定 = 即使有机构覆盖也仍可能 mispriced)
 - 💰 便宜+已去风险:估值压抑 + 产能/订单锁定或现金充足
 
 **Step 6 · 入场时机(★ 见下方两套模式,别搞错)**
@@ -101,6 +107,7 @@ description: 给定一个投资主题/趋势,复用交易者 Serenity(@aleabitor
 - `reference/report_template.html` —— **HTML 报告骨架 + 配色模板**(交付物按此生成,见"输出模板(HTML)")
 - `reference/example_commercial_space.md` —— worked example(商业航天),**示范分析内容与颗粒度**(报告格式以 HTML 模板为准)
 - `tracking/forward_picks.csv` + `tracking/score_tracker.py` —— 向前(样本外)跟踪表 + EODHD 打分脚本
+- `tracking/cross_theme_scan.py` + `tracking/cross_theme_index_snapshot.csv` —— **跨主题节点扫描**(Step 4 末尾强制跑)+ 最近一次快照
 
 ## 验证状态(诚实说明)
 - **逻辑自洽性(已做,非业绩回测)**:套到他研究过的"AI 光子学"能重建其名单(AXTI/SIVE/LITE/TSEM/SOI/IQE/AEHR…);套到他没碰过的"AI 电力散热"能独立挖出 $CLF(GOES 电工钢独家)、$CC(浸没冷却液单源);套到"商业航天"能挖出 $VNP/5N+(西方锗/镓/铟 + AZUR 空间太阳能,China 出口管制)、$MTRN(铍近垄断)。→ 说明"拆链 + 原型"逻辑能指向真实瓶颈公司。

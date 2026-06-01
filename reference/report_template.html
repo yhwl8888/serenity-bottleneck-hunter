@@ -90,6 +90,18 @@
   .nmcell .t{font-weight:700; font-size:15.5px; line-height:1.25} .nmcell .d{color:var(--muted); font-size:13.5px; margin-top:3px}
   .badge{display:inline-block; font-family:var(--mono); font-size:10.5px; font-weight:700; letter-spacing:.06em; padding:3px 8px; border-radius:5px; margin-top:7px; text-transform:uppercase}
   .b-green{background:var(--green-bg); color:var(--green)} .b-amber{background:var(--amber-bg); color:var(--amber)} .b-red{background:var(--red-bg); color:var(--red)} .b-gray{background:var(--gray-bg); color:var(--gray)}
+  /* ⭐ 跨主题节点徽章 — 见 tracking/cross_theme_scan.py */
+  .star{display:inline-block; font-size:13px; margin-left:6px; vertical-align:middle; color:var(--gold); cursor:help; letter-spacing:-1px}
+  .star[title]{border-bottom:1px dotted var(--gold)}
+  .cross-theme-section{background:var(--surface-2); border:1px solid var(--line-strong); border-left:5px solid var(--gold); border-radius:6px; padding:24px 28px; margin:30px 0}
+  .cross-theme-section h3{font-family:var(--display); font-weight:700; color:var(--burg); margin:0 0 14px; font-size:22px}
+  .cross-theme-section .lead{margin-bottom:18px; color:var(--ink-soft); font-size:15px}
+  .cross-row{display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:center; padding:12px 0; border-bottom:1px dashed var(--line); font-size:14.5px}
+  .cross-row:last-child{border-bottom:0}
+  .cross-row .sym{font-family:var(--mono); font-weight:700; color:var(--burg); font-size:15px}
+  .cross-row .themes{color:var(--ink-soft)}
+  .cross-row .themes em{font-style:normal; color:var(--burg); font-weight:600}
+  .cross-row .stars-cell{font-size:18px; color:var(--gold); letter-spacing:-2px}
   .mo{font-family:var(--mono)}
   .mo .track{height:8px; background:var(--surface-2); border:1px solid var(--line); border-radius:99px; overflow:hidden; position:relative; margin-bottom:6px}
   .mo .fill{height:100%; border-radius:99px}
@@ -185,10 +197,11 @@
 
     <!-- ===== 候选行示例:复制此块,按 stage 从 early→extended 排序 ===== -->
     <!-- stage=early-uptrend → mo.s-early + stage-t.early + badge b-green/b-amber -->
+    <!-- ⭐ 跨主题节点(来自 cross_theme_scan.py):在 .t 后面加 <span class="star" title="跨X主题: A + B">⭐</span> 或 ⭐⭐ -->
     <div class="row">
       <div class="tk">{{代码}}<span class="px">{{$现价}}</span></div>
       <div class="nmcell">
-        <div class="t">{{名称 · 档位}}</div>
+        <div class="t">{{名称 · 档位}}<span class="star" title="跨 2 主题:光子学 + 800VDC(示范)">⭐</span></div>
         <div class="d">{{瓶颈逻辑(原型#) + 估值/增长 + 稀释红旗(若有)}}</div>
         <span class="badge b-green">🟢 {{判定标签}}</span>
       </div>
@@ -200,7 +213,21 @@
     <!-- stage=range/basing → mo.s-range + stage-t.range -->
 
   </div>
-  <p class="note" style="margin-top:18px"><b>怎么读这张表:</b>{{模式 A 提示:绿色=还能埋伏,红/琥珀=已抛物线应等回调标 🟡}}</p>
+  <p class="note" style="margin-top:18px"><b>怎么读这张表:</b>{{模式 A 提示:绿色=还能埋伏,红/琥珀=已抛物线应等回调标 🟡}};<b>⭐ = 跨主题节点</b>(被多个 capex cycle 同时驱动,前机构闸门自动加分)。</p>
+
+  <!-- ============ 跨主题信号区块(Serenity ⑤跨 capex cycle 原型)============ -->
+  <!-- 数据来自 tracking/cross_theme_index_snapshot.csv,LLM 把当前报告主题相关的 ⭐ 节点列在这里 -->
+  <div class="cross-theme-section">
+    <h3>⭐ 跨主题信号 — 同时服务多个 capex cycle</h3>
+    <p class="lead">这些标的 <b>同时出现在本主题与其他已分析主题</b>,产能压力是叠加的、定价权非线性。详见 <code style="font-family:var(--mono);font-size:13px">tracking/cross_theme_index_snapshot.csv</code>。</p>
+    <!-- 每个跨主题节点一行;LLM 从 snapshot.csv 取该主题相关的 ⭐ 行填入 -->
+    <div class="cross-row">
+      <span class="sym">{{symbol}}</span>
+      <span class="themes">同时是 <em>{{theme_A}}</em> 的{{档位说明 A}}、也是 <em>{{theme_B}}</em> 的{{档位说明 B}}。{{两个主题的状态 — 🔥active / 🌡️mature / ❄️cooled}}</span>
+      <span class="stars-cell">{{⭐ 或 ⭐⭐}}</span>
+    </div>
+    <!-- 若本主题无跨主题节点,显示:"本主题候选当前无跨主题节点(forward_picks 覆盖范围内)。" -->
+  </div>
 </div></section>
 
 <!-- ============ Step 5 · 三道闸门 ============ -->

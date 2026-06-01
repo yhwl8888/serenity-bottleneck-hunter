@@ -401,9 +401,12 @@
           var id = n.dataset.id; if(!id) return;
           n.classList.remove('is-bottleneck');
           var inD = indeg[id] || 0, outD = outdeg[id] || 0;
-          if(inD >= 2 && outD <= 1) n.classList.add('is-bottleneck');
+          /* 瓶颈判定 = 入度≥2 且 出度≤1,且**不在下游层**(下游天然是终端,不是猎物)*/
+          var inDown = n.closest('.chain-layer-down') !== null;
+          if(inD >= 2 && outD <= 1 && !inDown) n.classList.add('is-bottleneck');
           var tip = '入度:' + inD + ' · 出度:' + outD;
           if(n.classList.contains('is-bottleneck')) tip += ' · 🔒 自动判定为瓶颈点';
+          else if(inDown && inD >= 2) tip += ' · 链路终端(下游层,跳过)';
           if(n.querySelector('.star-inline')) tip += ' · ⭐ 跨主题节点';
           n.title = tip;
         });

@@ -53,7 +53,18 @@ def is_eligible(row):
 
 
 def stage_bucket(stage_text):
-    """把 entry_stage 文本桶化为 early / ext / cool / seed / other,用于主题状态判定。"""
+    """把 entry_stage 文本桶化为 early / ext / basing-momentum / cool / seed / other。
+
+    桶定义(2026-06-01 加 basing-momentum,修复物理 AI 主题被误判 cooled 的 bug):
+    - seed:        历史种子,不计入主题状态
+    - early:       明确写 "early-uptrend" 或类似
+    - ext:         extended/parabolic/at-top/已到顶等
+    - basing-momentum:  关键新增桶 — "深度回调后 1m 启动" 的真模式 A 早期
+                        触发关键词:basing / range/启动 / 1m+ 转正 / 真basing
+                        实际是 active 早期,不是 cooled
+    - cool:        downtrend / range 且无启动信号 / 横盘 / 已回调多月
+    - other:       兜底
+    """
     s = (stage_text or "").lower()
     if "historical-seed" in s or "seed" in s:
         return "seed"
@@ -61,13 +72,25 @@ def stage_bucket(stage_text):
         return "early"
     if "extend" in s or "parabolic" in s or "top" in s or "顶" in s or "hot" in s:
         return "ext"
+    # basing-with-momentum:关键启动信号关键词(在 range/down 文本里出现的"启动 / 真 basing / 1m+xx%"等)
+    if "启动" in s or "真 basing" in s or "真basing" in s or "basing 启动" in s or "basing-momentum" in s:
+        return "basing-momentum"
+    # 普通 range/down(无启动信号)
     if "down" in s or "横盘" in s or "range" in s or "basing" in s or "below" in s:
         return "cool"
     return "other"
 
 
 def compute_theme_status(rows):
-    """根据 stage 分布判定主题状态。"""
+    """根据 stage 分布判定主题状态。
+
+    优先级(从高到低):
+    1. 多数 early 或 basing-momentum → 🔥 active(含早期启动场景)
+    2. 多数 ext → 🌡️ mature
+    3. 多数 cool(且无启动信号)→ ❄️ cooled
+    4. 都是 seed → 🌱 seed-only
+    5. 其它 → 🌡️ mixed
+    """
     by_theme = defaultdict(lambda: defaultdict(int))
     for r in rows:
         b = stage_bucket(r.get("entry_stage", ""))
@@ -75,12 +98,18 @@ def compute_theme_status(rows):
 
     status = {}
     for theme, buckets in by_theme.items():
-        n = sum(buckets.values()) - buckets.get("seed", 0)  # 种子行不计入"现状"
+        n = sum(buckets.values()) - buckets.get("seed", 0)
         if n == 0:
             status[theme] = "🌱 seed-only"
             continue
-        if buckets.get("early", 0) / n >= 0.4:
-            status[theme] = "🔥 active"
+        # active 早期 = early + basing-momentum 合计 ≥ 40%
+        active_count = buckets.get("early", 0) + buckets.get("basing-momentum", 0)
+        if active_count / n >= 0.4:
+            # 进一步区分:basing-momentum 占多的标"🔥 active(早期启动)"
+            if buckets.get("basing-momentum", 0) > buckets.get("early", 0):
+                status[theme] = "🔥 active(早期启动)"
+            else:
+                status[theme] = "🔥 active"
         elif buckets.get("ext", 0) / n >= 0.5:
             status[theme] = "🌡️ mature"
         elif buckets.get("cool", 0) / n >= 0.3:

@@ -34,6 +34,8 @@ description: 给定一个投资主题/趋势,复用交易者 Serenity(@aleabitor
   - **OS / 软件标准**:Microsoft Copilot+ 标准(40 TOPS NPU)/ Apple Neural Engine 私有协议
   - **行业认证机构**:CHIPS Act 资金分配、出口管制清单制定方(若上市)
   - 反例(2026-06-01 dogfood 漏掉 ARM):个人 AI PC 主题 v1 报告扫了 25 只(5 层全谱),但**漏了 IP 层的 ARM**——ARM 是 Copilot+ PC 全部 ARM-based 的真上游、5+ 主题跨界(AI PC + 数据中心 ARM + 手机 + 汽车 + IoT)、5 个月 +208%(2026-01 $114 → 06-01 $353)。**漏 ARM 的根本原因是 5 层分类只覆盖物理供应链,IP/EDA 是逻辑供应链需独立检查。**
+- **私有公司检查 + 诚实跳过纪律(2026-06-01 加,物理 AI dogfood 教训)**:每个主题都会有"真单源/真瓶颈但是私有公司或子部门"的标的(如物理 AI 的六维力传感器:坤维/字节灵犀/宇立 — 全私;鼎智科技:北交所 EODHD 不支持)。**禁止为了"凑标的"硬塞一个不纯/不可投的公司当候选**;**应在报告里显式列出"已识别但跳过"的瓶颈+原因**,这本身就是高密度信号(让读者知道"这层是真瓶颈但没法投")。例:物理 AI 报告底部列了"六维力 / 触觉皮肤:都是私有 → 跳过;鼎智:北交所 EODHD 不支持 → 跳过"。**坦诚标"无干净纯 play"比硬凑标的更有价值**。
+- **主题边界声明纪律(2026-06-01 加,物理 AI scope 教训)**:跑大类主题(如"物理 AI" / "AI 算力" / "能源转型")时,**报告顶部必须明确界定本期主题边界**——这些大类下通常有 3+ 个供应链特征差异显著的子领域(物理 AI 含人形机器人/自动驾驶/AMR/无人机/手术等),**不要默认覆盖全部**,而是显式说"本期聚焦 X 子领域,其他子领域(Y / Z)作为独立专题分批跑"。否则用户期待与实际产出 mismatch。物理 AI 主题 v1 已踩坑:默认"物理 AI = 人形机器人",未声明边界。**报告命名格式**:`<大类>_<子领域>_完整分析报告.html`(如 `物理AI_人形机器人专题_完整分析报告.html`)。
 
 **Step 3 · 对每层套「9 大瓶颈原型」**(详见 `reference/supply-chain-and-archetypes.md` Part D):
 ①上游材料/衬底垄断 ②单一来源卡脖子 ③产能售罄/已锁定=去风险 ④进每个设计的BOM/普适 ⑤估值对标套利 ⑥测试/设备瓶颈 ⑦冷门/前机构 ⑧巨头依赖护城河 ⑨宏观二阶/错杀。
@@ -72,6 +74,7 @@ description: 给定一个投资主题/趋势,复用交易者 Serenity(@aleabitor
 回测依据(11 只光子学标的):首call时多在前6月区间 **86%-237% 高位**入场,之后 **2-6 个月 +150%~+1100%**(中位 ~+277%)。→ **早于主题、容忍不抄底**才是 alpha 来源。
 
 **强制**用 `scripts/price.py` 拉真实价格数据(provider 自动回退:**EODHD(`EODHD_API_KEY`)优先 → yfinance 兜底**),输出 6 月区间位置、距高点、近 1/3 月动量、stage 标签。**严禁用 WebSearch 抓价格、严禁凭印象猜"差不多 early/extended"**——猜测视为流程错误。海外股(欧股/台股等)若 yfinance 拿不到,**让用户提供 EODHD key 或换可解析代码后重跑,不要降级为定性**。
+- **广扫批量拉价格必须走 price.py 接口(2026-06-01 加,用户挑战驱动)**:不允许用 PowerShell 直接 `Invoke-RestMethod` 调 EODHD API,**会绕过 yfinance fallback**——这是真实犯过的错(物理 AI 主题 v1 报告漏 4 只日股,因为 EODHD 不支持 .T 后缀,我用 inline EODHD 调用没触发 fallback)。**正确方式**:`python -c "from scripts.price import analyze; print(analyze('6324.T'))"`(走 EODHD→yfinance 完整链)或在脚本里 `from scripts.price import fetch_history`。批量场景写小 wrapper 脚本,**禁止 inline API**。
 
 ---
 

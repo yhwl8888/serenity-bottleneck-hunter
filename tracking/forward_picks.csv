@@ -77,17 +77,17 @@
 2026-06-01,个人AIPC,ARM.US,ARM Holdings,上游咽喉,①②④⑧⑨,353.29,USD,extended(1m+75/3m+177/rng100),🟡观望[trigger:回 \-260 深度回调-ARM IP 真单源+跨多主题但已抛物线],ARM IP 授权-Copilot+ PC 全部 ARM-based
 2026-06-01,个人AIPC,CDNS.US,Cadence,上游咽喉,①④,374.93,USD,early(3m+24/rng94顶部),🟡观望[trigger:回 \+NPU 设计客户多元化],EDA 双寡头-NPU/SoC 设计必用
 2026-06-01,个人AIPC,SNPS.US,Synopsys,上游咽喉,①④,475.62,USD,early-uptrend深度回调(1m-1/3m+15/off-11),🟢候选[模式 A 健康调整-EDA 双寡头之一],EDA 双寡头-每个 SoC 设计必用
-2026-06-01,物理AI,603297.SHG,绿的谐波,上游咽喉,①②⑨,130.98,CNY,range(1m+15%/3m+1.6%/rng63%),🟢候选[A股谐波减速器近垄断+模式A启动信号],人形机器人核心关节减速器-绿的全球第三+国内唯一规模量产
-2026-06-01,物理AI,603667.SHG,五洲新春,上游咽喉,①⑨,71.76,CNY,range/basing(1m+11.9%/3m-10.3%/off-21%),🟢候选[行星滚柱丝杠潜力+深度回调真basing],人形机器人线性执行器核心-丝杠潜力股
-2026-06-01,物理AI,603009.SHG,北特科技,上游咽喉,①⑨,48.26,CNY,range(1m+6%/3m-10%/off-19%),🟢候选[行星滚柱丝杠潜力+真basing],行星滚柱丝杠拓展+模式A早期
+2026-06-01,物理AI,603297.SHG,绿的谐波,上游咽喉,①②⑨,130.98,CNY,range基期+1m+15%启动,🟢候选[A股谐波减速器近垄断+模式A启动信号],人形机器人核心关节减速器-绿的全球第三+国内唯一规模量产
+2026-06-01,物理AI,603667.SHG,五洲新春,上游咽喉,①⑨,71.76,CNY,basing启动(1m+11.9%/3m-10.3%/off-21%),🟢候选[行星滚柱丝杠潜力+深度回调真basing],人形机器人线性执行器核心-丝杠潜力股
+2026-06-01,物理AI,603009.SHG,北特科技,上游咽喉,①⑨,48.26,CNY,basing启动(1m+6%/3m-10%/off-19%),🟢候选[行星滚柱丝杠潜力+真basing],行星滚柱丝杠拓展+模式A早期
 2026-06-01,物理AI,002338.SHE,奥普光电,上游咽喉,①⑨,55.75,CNY,range深度回调(1m-9%/3m-0.4%/off-18%),🟡观望[trigger:1m转正+人形机器人编码器订单visibility],A股光电编码器领先-纯play
 2026-06-01,物理AI,603728.SHG,鸣志电器,上游咽喉,①⑨,61.32,CNY,downtrend(1m+4.9%/3m-11.3%/rng29%),🟡观望[trigger:站回SMA50+空心杯电机订单],空心杯电机A股龙头-人形机器人精细执行器
 2026-06-01,物理AI,688160.SHG,步科股份,上游咽喉,①⑨,110.93,CNY,downtrend(1m+8%/3m-11.5%/rng28%),🟡观望[trigger:回到rng50%以上+无框力矩电机量产订单],无框力矩电机+伺服-人形关节直驱
 2026-06-01,物理AI,RSW.LSE,Renishaw,上游咽喉,①,5300,GBX,early-uptrend贴顶(rng99%/3m+23%),🟡观望[trigger:回调-15%以上],英国高精度编码器全球龙头-业务多元摊薄
 2026-06-01,物理AI,ADI.US,Analog Devices,上游设备,④⑧,413.85,USD,early-uptrend(1m+6%/3m+16%/rng89%),🟡观望[trigger:MEMS IMU机器人营收占比可量化],MEMS+ISP综合-机器人感知+模拟链路-巨头摊薄
 2026-06-01,物理AI,TTDKY.US,TDK ADR,上游设备,④⑧,25.91,USD,extended/parabolic(1m+55%/3m+67%/rng100%),🔴跳过[已抛物线],MEMS IMU(InvenSense)+电池+磁头综合-需求被市场认知
-2026-06-01,物理AI,6324.T,Harmonic Drive,上游咽喉,①②,NEEDS-VERIFY,JPY,EODHD数据缺,🟡观望[trigger:换 yfinance 拉数据后再判],日本谐波减速器全球龙头-人形机器人关节核心
-2026-06-01,物理AI,6268.T,Nabtesco,上游咽喉,①②,NEEDS-VERIFY,JPY,EODHD数据缺,🟡观望[trigger:换 yfinance 拉数据后再判],日本RV减速器全球龙头-机器人本体大型关节
+2026-06-01,物理AI,6324.T,Harmonic Drive,上游咽喉,①②,7780,JPY,extended(1m+64%/3m+70%/rng89%-yfinance),🔴跳过[已抛物线-日股龙头先涨],日本谐波减速器全球龙头-人形机器人关节核心(先涨案例-印证主题成立)
+2026-06-01,物理AI,6268.T,Nabtesco,上游咽喉,①②,5541,JPY,early-uptrend(1m+10%/3m+14%/rng80%-yfinance),🟡观望[trigger:小盘标的优先-Nabtesco MC偏大失⑦],日本RV减速器全球龙头-机器人本体大型关节
 2026-06-01,物理AI,AMBA.US,Ambarella,中游卖铲子,④⑦,72.18,USD,early-uptrend(1m+9.5%/3m+19.6%/rng52%),🟢候选[机器人视觉SoC纯play+健康位置],边缘视觉SoC-机器人/自动驾驶/安防
 2026-06-01,物理AI,002747.SHE,埃斯顿,中游系统,④⑧,27.72,CNY,early-uptrend(1m+33%/3m+17%/rng78%),🟡观望[trigger:1m偏热-回调-15%后],A股工业机器人本体龙头-1m+33%已启动
 2026-06-01,物理AI,ARM.US,ARM Holdings,IP层,①②④⑧⑨,353.29,USD,extended(1m+75%/3m+177%/rng100%),🟡观望[trigger:回\-260],ARM IP-NVDA Jetson/Grace/机器人SoC普适-跨主题⭐扩展到第3个主题
@@ -95,3 +95,5 @@
 2026-06-01,物理AI,NVDA.US,NVIDIA,下游对照,排除,211.14,USD,early(1m+0.9%/3m+19%),🔴排除[下游巨头-Cosmos主推但市值4T+全市场覆盖],Physical AI主推-Cosmos/Jetson/Isaac/Omniverse
 2026-06-01,物理AI,TSLA.US,Tesla,下游对照,排除,435.79,USD,early(1m+17%/3m+8%),🔴排除[下游巨头-Optimus主推但已被覆盖],Optimus人形机器人+FSD
 2026-06-01,物理AI,ISRG.US,Intuitive Surgical,下游对照,排除,424.64,USD,downtrend(1m-6%/3m-16%/rng3%),🔴排除[非Serenity猎物],医疗机器人da Vinci-估值已显著调整但不是主题猎物
+2026-06-01,物理AI,6954.T,Fanuc,中游系统,④⑧,8081,JPY,early-uptrend(1m+16%/3m+15%/rng81%-yfinance),🟡观望[trigger:小盘标的优先-Fanuc MC偏大失⑦],日本工业机器人龙头-下游本体厂
+2026-06-01,物理AI,6506.T,Yaskawa,中游系统,④⑧,7140,JPY,early-uptrend偏热(1m+33%/3m+32%-yfinance),🟡观望[trigger:回调-15%],日本伺服+工业机器人本体-1m+33%偏热

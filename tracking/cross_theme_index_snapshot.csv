@@ -1,4 +1,4 @@
 snapshot_date,symbol,name,tier,archetypes,theme_count,stars,themes_list,themes_active_status
-2026-06-01,MPWR.US,Monolithic Power,中游卖铲子,④,3,⭐⭐,800VDC电源半导体;个人AIPC;物理AI,🔥 active/🔥 active/❄️ cooled
-2026-06-01,ARM.US,ARM Holdings,上游咽喉,①②④⑧⑨,3,⭐⭐,AI算力;个人AIPC;物理AI,🌱 seed-only/🔥 active/❄️ cooled
+2026-06-01,MPWR.US,Monolithic Power,中游卖铲子,④,3,⭐⭐,800VDC电源半导体;个人AIPC;物理AI,🔥 active/🔥 active/🔥 active
+2026-06-01,ARM.US,ARM Holdings,上游咽喉,①②④⑧⑨,3,⭐⭐,AI算力;个人AIPC;物理AI,🌱 seed-only/🔥 active/🔥 active
 2026-06-01,AEHR.US,AEHR,上游设备,⑥⑤,2,⭐,800VDC电源半导体;光子学,🔥 active/🌱 seed-only

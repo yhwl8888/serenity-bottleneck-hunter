@@ -48,3 +48,28 @@
 "2026-01-02","光子学","AEHR.US","AEHR Test","上游设备","⑥⑤","22.16","USD","historical-seed","🟢历史种子[Serenity首call验证]","光子器件测试设备+跨SiC复用"
 "2026-01-02","AI算力","NBIS.US","Nebius","中游卖铲子","④⑦⑧","89.95","USD","historical-seed","🟢历史种子[Serenity首call验证]","GPU算力出租+MSFT170亿合同"
 "2026-01-02","商业航天","RKLB.US","Rocket Lab","中游卖铲子","④⑧","75.99","USD","historical-seed","🟢历史种子[Serenity首call验证]","发射+总包(偏Evolution而非Bottleneck)"
+2026-06-01,个人AIPC,MU.US,Micron,上游咽喉,①⑧,971,USD,extended(1m+87%/3m+135%),🔴跳过[已抛物线-LPDDR5X 龙头全市场覆盖],美国独家 LPDDR5X+HBM
+2026-06-01,个人AIPC,000660.KO,SK Hynix,上游咽喉,①,NEEDS-VERIFY,KRW,EODHD数据异常,🟡观望[trigger:EODHD/yfinance交叉验证后再判],LPDDR5X 全球 #2+HBM 领先
+2026-06-01,个人AIPC,005930.KO,Samsung Electronics,上游咽喉,①,317000,KRW,extended(rng100%+1m+40%/3m+46%),🔴排除[巨头综合摊薄+rng顶],半导体+显示综合
+2026-06-01,个人AIPC,TSM.US,TSMC,上游咽喉,①③⑧,418.45,USD,early-uptrend(1m+6%/3m+12%),🔴跳过[太大+下游已覆盖],先进制程+InFO/SoIC 封装
+2026-06-01,个人AIPC,AMKR.US,Amkor,上游咽喉,①③,69.56,USD,early-uptrend(1m-1.5%/3m+45%/rng79%),🟢候选[Serenity风格模式A健康调整 setup],高端封装代工+CoWoS 合作
+2026-06-01,个人AIPC,ASEKY.US,ASE Tech ADR,上游咽喉,①③,13.6,USD,downtrend(3m-21%/off-30%),🟡观望[trigger:重新站回 SMA50+营收 visibility],ASE 封测综合-ADR 流动性弱
+2026-06-01,个人AIPC,LPL.US,LG Display,上游咽喉,①,5.55,USD,early-uptrend(1m+34%/3m+10%/rng98%),🟡观望[trigger:回调到-15%+OLED 笔电屏营收占比],OLED 笔电屏+电视屏综合
+2026-06-01,个人AIPC,0522.HK,ASMPT,上游设备,⑥,194,HKD,early-uptrend但偏热(1m+18%/3m+73%/rng92%),🟡观望[trigger:回HK+CoWoS 设备订单 visibility],高端封装设备 TCB/SiP
+2026-06-01,个人AIPC,ONTO.US,Onto Innovation,上游设备,⑥,258.24,USD,early-uptrend深度回调(1m-9%/3m+19%/off-16%),🟢候选[健康回调期+先进封装计量纯 play],封装/AI 衬底计量设备
+2026-06-01,个人AIPC,AMAT.US,Applied Materials,上游设备,⑥,450.06,USD,early-uptrend(1m+17%/3m+21%/rng98%),🔴排除[综合大厂业务摊薄+市值已5300亿],半导体设备综合
+2026-06-01,个人AIPC,MPWR.US,Monolithic Power,中游卖铲子,④,1566.21,USD,early(1m+3%/3m+37%/rng87%),🟡观望[trigger:AI PC PMIC 营收占比可量化],高效率 PMIC-同时跨 800VDC 主题
+2026-06-01,个人AIPC,QRVO.US,Qorvo,中游卖铲子,④⑧,103.56,USD,early-uptrend(1m+20%/3m+25%/rng86%),🟡观望[trigger:转型连接+电源占比+Apple 客户依赖度],RF+电源转型期
+2026-06-01,个人AIPC,SWKS.US,Skyworks,中游卖铲子,④⑧,77.85,USD,early-uptrend(1m+24%/3m+31%/rng82%),🟡观望[trigger:非 Apple 客户多元化+营收 visibility],RF 综合+Apple 大客户依赖
+2026-06-01,个人AIPC,SIMO.US,Silicon Motion,中游卖铲子,④⑦,276.87,USD,extended(1m+27%/3m+114%/rng93%),🟡观望[trigger:回\ 或本地 AI 推理 SSD 占比可量化],SSD 主控+本地推理 alpha
+2026-06-01,个人AIPC,SYNA.US,Synaptics,中游卖铲子,④,137.28,USD,extended(1m+55%/3m+68%),🟡观望[trigger:回-25%+边缘 AI 营收],触控+边缘 AI
+2026-06-01,个人AIPC,MXL.US,MaxLinear,中游卖铲子,④⑦,92.93,USD,extended/parabolic(3m+433%),🔴跳过[3m+433% 妖股别追],Wi-Fi 7+连接已抛物线
+2026-06-01,个人AIPC,5392.TWO,Auras Technology,中游卖铲子,④⑥,44.55,TWD,range/basing(1m+9.5%/3m-1%/rng57%),🟢候选[Vapor Chamber 真早期+笔电散热瓶颈],散热模组 Vapor Chamber
+2026-06-01,个人AIPC,3324.TW,Aurora Forging,中游卖铲子,④⑥,NEEDS-DATA,TWD,EODHD无数据,🟡观望[trigger:换 yfinance 或台股代码重试],双鸿笔电散热龙头
+2026-06-01,个人AIPC,3483.TWO,Liguid,中游卖铲子,④⑥,95,TWD,range(1m+1.4%/3m+3%/rng75%),🟡观望[trigger:站稳+AI PC 散热订单 visibility],力致散热模组
+2026-06-01,个人AIPC,2382.TW,Quanta,中游系统,④,339,TWD,early(1m+5%/3m+16%/rng91%),🔴跳过[ODM 已被覆盖+毛利率低],笔电 ODM 龙头
+2026-06-01,个人AIPC,2356.TW,Inventec,中游系统,④,70.2,TWD,extended(rng100%/1m+52%/3m+52%),🔴跳过[已抛物线+ODM 摊薄],笔电 ODM
+2026-06-01,个人AIPC,INTC.US,Intel,下游对照,排除,114.68,USD,extended(3m+151%),🔴排除[下游巨头-非Serenity猎物],Lunar Lake/Panther Lake NPU
+2026-06-01,个人AIPC,AMD.US,AMD,下游对照,排除,516.1,USD,extended(1m+53%/3m+158%/rng99%),🔴排除[下游巨头],Ryzen AI 300/Strix Halo
+2026-06-01,个人AIPC,QCOM.US,Qualcomm,下游对照,排除,251.02,USD,extended(1m+61%/3m+76%/rng100%),🔴排除[下游巨头],Snapdragon X Elite/Plus
+2026-06-01,个人AIPC,MSFT.US,Microsoft,下游对照,排除,450.24,USD,early(1m+6%/3m+15%),🔴排除[下游巨头-MC 3T+],Copilot+ 标准制定者

@@ -73,3 +73,7 @@
 2026-06-01,个人AIPC,AMD.US,AMD,下游对照,排除,516.1,USD,extended(1m+53%/3m+158%/rng99%),🔴排除[下游巨头],Ryzen AI 300/Strix Halo
 2026-06-01,个人AIPC,QCOM.US,Qualcomm,下游对照,排除,251.02,USD,extended(1m+61%/3m+76%/rng100%),🔴排除[下游巨头],Snapdragon X Elite/Plus
 2026-06-01,个人AIPC,MSFT.US,Microsoft,下游对照,排除,450.24,USD,early(1m+6%/3m+15%),🔴排除[下游巨头-MC 3T+],Copilot+ 标准制定者
+2026-01-02,AI算力,ARM.US,ARM Holdings,上游咽喉,①②④⑧⑨,114.73,USD,historical-seed,🟢历史种子[ARM IP 跨多主题-数据中心ARM/Graviton/Grace 上游],ARM IP 授权-每片 ARM-based SoC 必交版税
+2026-06-01,个人AIPC,ARM.US,ARM Holdings,上游咽喉,①②④⑧⑨,353.29,USD,extended(1m+75/3m+177/rng100),🟡观望[trigger:回 \-260 深度回调-ARM IP 真单源+跨多主题但已抛物线],ARM IP 授权-Copilot+ PC 全部 ARM-based
+2026-06-01,个人AIPC,CDNS.US,Cadence,上游咽喉,①④,374.93,USD,early(3m+24/rng94顶部),🟡观望[trigger:回 \+NPU 设计客户多元化],EDA 双寡头-NPU/SoC 设计必用
+2026-06-01,个人AIPC,SNPS.US,Synopsys,上游咽喉,①④,475.62,USD,early-uptrend深度回调(1m-1/3m+15/off-11),🟢候选[模式 A 健康调整-EDA 双寡头之一],EDA 双寡头-每个 SoC 设计必用

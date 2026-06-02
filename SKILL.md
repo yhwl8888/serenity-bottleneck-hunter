@@ -24,15 +24,25 @@ description: 给定一个投资主题/趋势,复用交易者 Serenity(@aleabitor
 这个主题的钱为什么"一定"会花?规模、周期多长?需求确定性 > 个股故事性。先归类:这是 **Bottleneck(瓶颈)/ Disruption(颠覆)/ Evolution(演进)**?(本 skill 主攻 Bottleneck)
 - **标明需求来源**:政府/国防(NASA、SDA、NRO…节奏慢、看订单与预算周期)还是商业(超大规模厂商 capex…节奏快)?二者的估值锚与择时节奏不同,后面 Step 6/7 要据此调整。
 
-**Step 2 · 逆向拆链 + 广扫纪律(6 层 + 穷尽性)**
-列出 **6 层** 从下游到上游:**下游对照 → 中游系统 → 中游器件 → 上游设备 → 上游材料/代工 → IP/EDA 层(逻辑供应链)**。**跳过人人都盯的下游龙头**。
+**Step 2 · 逆向拆链 + 广扫纪律(5 层产业链 + 跨主题 root + 可选第 6 层独有 IP)**
+列出 **5 层** 从下游到上游:**下游对照 → 中游系统 → 中游器件 → 上游设备 → 上游材料/代工**。**跳过人人都盯的下游龙头**。
 - **必做"广扫供应商"**:除最上游材料层外,**单独再搜一轮**该主题的"子系统/器件/卖铲子供应商"(如航天的太阳能阵/星敏感器厂)。否则会漏掉④原型的标的——教训:首跑商业航天就漏了 Redwire(ROSA 太阳能阵/星敏感器)。
-- **广扫颗粒度纪律**:必须覆盖**6 层**——上游材料/代工 → 上游设备 → 中游器件 → 中游系统 → 下游对照 → **IP/EDA 层(2026-06-01 升级为必扫第 6 层)**,**每层至少 2-3 个标的**。避免"上游只看到 1 个就停"。**广扫不到位 ≠ 板块没机会**——800VDC v1 只扫 6 只就判"全 extended",v2 扩到 15 只立刻挖出 STM。
-- **IP/EDA 层升级为第 6 层(2026-06-01 用户反馈驱动)**:个人 AI PC dogfood 暴露 — 原版 5 层"物理供应链"漏 ARM,后续每次都在补 IP/EDA → **正式升级为常规扫描层**。每个主题<b>必扫</b>:
-  - **IP 授权**:`ARM`(每片 ARM SoC 版税)/ RISC-V 阵营 / 各种自研 IP(Imagination GPU、Cadence/Synopsys 的 NPU IP 等)
-  - **EDA 双寡头**:`CDNS`(Cadence)/ `SNPS`(Synopsys)/ Siemens EDA — 每个 SoC 设计必用
-  - **OS / 软件标准**:Microsoft Copilot+ 标准(40 TOPS NPU)/ Apple Neural Engine 私有协议
-  - **行业认证机构**:CHIPS Act 资金分配、出口管制清单制定方(若上市)
+- **广扫颗粒度纪律**:必须覆盖**5 层产业链**——上游材料/代工 → 上游设备 → 中游器件 → 中游系统 → 下游对照,**每层至少 2-3 个标的**。避免"上游只看到 1 个就停"。**广扫不到位 ≠ 板块没机会**——800VDC v1 只扫 6 只就判"全 extended",v2 扩到 15 只立刻挖出 STM。
+- **跨主题 root 节点纪律(2026-06-02 用户反馈驱动 — IP/EDA 分层冗余暴露)**:**ARM / CDNS / SNPS 不再画在每个主题的产业链层里**,而是放在 chain-viz 上方独立的**"跨主题 root"小 section**,显示一次。理由:这三家是**所有芯片设计驱动主题共用的根**(EDA 双寡头 + ARM IP 单源),在 7 份历史报告里 100% 重复 = 信息熵 = 0。
+  - **报告 chain-viz 上方加 cross-theme root 卡片**(独立 section,跨主题节点,标 ⭐⭐):
+    ```
+    <div class="cross-theme-root">
+      <span class="label">跨主题 root(芯片设计驱动主题共用)</span>
+      ARM ⭐⭐ + CDNS ⭐⭐ + SNPS ⭐⭐
+    </div>
+    ```
+  - **链接到** `tracking/cross_theme_index_snapshot.csv` — 它们的 ⭐⭐ 状态是 cross-theme 计算结果,不再每个主题重画。
+- **可选第 6 层 · "主题独有 IP/EDA 玩家"(仅当主题真有独立玩家)**:
+  - **自动驾驶 L4** → 真有独立 IP:**MBLY**(Mobileye,IP 授权给 BMW/Audi/Geely)— 必须画
+  - **个人 AI PC** → ARM 在 PC 是**真单源**(Apple M + Qualcomm Snapdragon X + AMD AI300)— 保留画在产业链顶层 + 标本主题真单源(不仅是 cross-theme)
+  - **AI Agent / 物理 AI / AMR** → 无独立 IP 玩家 → **chain-viz 不画第 6 层**,在 root section 提一次即可
+  - **MLCC / 800VDC / 商业航天** → 不依赖芯片设计,**完全跳过** IP/EDA(已有先例,继续保持)
+  - **凑数禁令**:**没有真独立玩家的主题不强制画第 6 层** — IP/EDA 是 optional,不是 mandatory。**只有真存在主题独有玩家 + 该玩家在产业链有真瓶颈角色** 才画。
 - **穷尽性纪律(A 项,2026-06-01 用户反馈驱动,候选数集中 20+ 是隐性 stopping rule 而非穷尽广扫)**:每个主题开扫前,**必须先列"已知玩家全集"**(全球+全市场,涵盖上市/私有/被并购),然后**逐一显式标记**:`covered`(已纳入候选)/ `private`(私有公司,跳过 + 原因)/ `acquired`(已被收购,标合并实体)/ `delisted`(已退市)/ `untracked`(EODHD/yfinance 都无数据)。**不允许"默认遗漏"**——例:自动驾驶 L4 LiDAR 玩家全集 = Hesai/Luminar/Innoviz/Aeva/Ouster/Velodyne(已合并 OUST)/Cepton(被 KOEL 收)/Innovusion(被尼欧买)/Quanergy(破产)/RoboSense(港股)/Hesai 速腾 = **必须显式列全 + 标记**,不允许"我扫了 5 家就够了"。这个清单写在报告底部的"私有公司诚实跳过"区块或独立"已知玩家全集 audit"块。
 - **A+ 工具化兜底 · ETF 持仓 audit(2026-06-02,Dogfood #10 漏 PANW/CRWD/RBRK 教训驱动)**:**A 项"凭记忆列全集"不够**——会漏 PANW、CRWD、FTNT、RBRK 这种主仓玩家(Dogfood #10 美股 AI Agent 真实漏标:34 只里漏 34 只,covered 率只有 50%)。**修复机制(强制)**:每个新主题开 forward_picks 扫描前,**必须先跑** `python scripts/theme_etf_coverage.py --etfs <ETF1>,<ETF2>,... --theme "<主题名>"`,工具会:
   1. 从 stockanalysis.com 拉每个主题 ETF 的 top 25 持仓

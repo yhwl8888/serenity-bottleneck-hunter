@@ -173,3 +173,31 @@
 2026-06-02,AIAgent经济,META.US,Meta,下游对照,排除,600.47,USD,range(rng36%),🔴排除[下游巨头-Llama 自营],开源 LLM 持有方
 2026-06-02,AIAgent经济,S.US,SentinelOne,中游系统,④⑦,17.81,USD,extended边缘(1m+19%/3m+34%),🔴跳过[偏热],AI 安全
 2026-06-02,AIAgent经济,DBX.US,Dropbox,中游系统,④,28.91,USD,extended(1m+16%/3m+10%/rng85%),🔴跳过[偏热],Dropbox AI 文档 agent
+2026-06-02,AIAgent中国,1357.HK,美图公司,中游应用,④⑦,5.5,HKD,basing-momentum(1m+32%/3m-3%/rng27%/off-41%),🟢候选[模式A真启动+美颜SaaS 商业化],美图秀秀+AI设计工具订阅制商业化
+2026-06-02,AIAgent中国,688111.SHG,金山办公,中游应用,④⑦⑨,256.1,CNY,basing-momentum启动(1m+2.7%/3m-15%/rng16%/off-38%),🟢候选[WPS AI 国产 Copilot+深度回调启动],WPS Office + WPS AI 类 Copilot 国产替代
+2026-06-02,AIAgent中国,0268.HK,金蝶国际,中游应用,④⑦⑧,8.68,HKD,basing-momentum(1m+1.5%/3m-12%/rng17%/off-49%),🟢候选[企业 SaaS 苍穹 Agent+深度回调启动],企业 ERP+云 SaaS 苍穹 AI Agent
+2026-06-02,AIAgent中国,688787.SHG,海天瑞声,上游材料,①④⑦,138.11,CNY,basing-momentum(1m+7.5%/3m-9%/rng39%/off-30%),🟢候选[AI 训练数据集纯 play+1m 启动],语音/视觉/NLP AI 训练数据集
+2026-06-02,AIAgent中国,300033.SHE,同花顺,中游应用,④⑦,228.87,CNY,range深度底(1m-2%/3m-31%/rng4%/off-47%),🟡观望[trigger:1m 转正],金融信息服务+i问财 AI
+2026-06-02,AIAgent中国,300229.SHE,拓尔思,中游 infra,④⑦,17.37,CNY,range深度底(1m-3%/3m-25%/rng6%/off-44%),🟡观望[trigger:1m 转正],NLP+知识图谱+政务/媒体大模型应用
+2026-06-02,AIAgent中国,688561.SHG,奇安信,中游 infra,④⑦,27.69,CNY,range深度底(1m-6%/3m-22%/rng7%/off-38%),🟡观望[trigger:1m 转正+AI 安全 ARR],网络安全+AI agents API 安全护栏
+2026-06-02,AIAgent中国,600588.SHG,用友网络,中游应用,④⑦⑨,11.41,CNY,range深度底(1m-4%/3m-20%/rng16%/off-40%),🟡观望[trigger:YonGPT 营收 visibility],企业 ERP+YonGPT 大模型
+2026-06-02,AIAgent中国,002410.SHE,广联达,中游应用,④⑦,10.11,CNY,range深度底(1m-8%/3m-28%/rng10%/off-38%),🟡观望[trigger:1m 转正],建筑 BIM SaaS+AI
+2026-06-02,AIAgent中国,603039.SHG,泛微网络,中游应用,④⑦,40.3,CNY,range深度底(1m-11%/3m-14%/rng12%/off-46%),🟡观望[trigger:1m 转正],OA 协同办公+AI
+2026-06-02,AIAgent中国,002315.SHE,焦点科技,中游应用,④⑦,28.29,CNY,range极深底(1m-7%/3m-38%/rng5%/off-55%),🟡观望[trigger:1m 转正+电商订单],跨境电商 SaaS+AI 营销
+2026-06-02,AIAgent中国,2013.HK,微盟集团,中游应用,④⑦⑧,1.36,HKD,range深度底(1m-7%/3m-29%/rng8%/off-48%),🟡观望[trigger:腾讯生态营销 ARR],微信营销 SaaS+AI
+2026-06-02,AIAgent中国,0020.HK,商汤,中游应用,④⑦,1.76,HKD,range深度底(1m-11%/3m-28%/rng12%/off-37%),🟡观望[trigger:商量大模型 B 端订单],商量大模型(日日新)
+2026-06-02,AIAgent中国,688369.SHG,致远互联,中游应用,④⑦,22.37,CNY,range深度底(1m-8%/3m-14%/rng12%/off-38%),🟡观望[trigger:1m 转正],OA 协同办公中型厂商
+2026-06-02,AIAgent中国,688158.SHG,优刻得,中游 infra,④⑦,38.74,CNY,range回调中(1m-15%/3m-4%/rng53%/off-28%),🟡观望[trigger:1m 转正],第三方云+AI 算力服务
+2026-06-02,AIAgent中国,000977.SHE,浪潮信息,上游材料,①⑧,64.14,CNY,range中位(1m-11%/3m+0.4%/rng36%/off-19%),🟡观望[trigger:1m 转正+AI 服务器订单],AI 服务器+海若大模型+元脑 Agent 平台
+2026-06-02,AIAgent中国,603019.SHG,中科曙光,上游材料,①⑧,85.4,CNY,range深度回调(1m-6%/3m-7%/rng31%/off-19%),🟡观望[trigger:1m 转正],AI 服务器+HPC
+2026-06-02,AIAgent中国,002439.SHE,启明星辰,中游 infra,④⑧,14.48,CNY,range(1m-4.5%/3m-0.1%/rng42%/off-16%),🟡观望[trigger:1m 转正+中移动协同],网络安全(中移动控股)
+2026-06-02,AIAgent中国,688030.SHG,山石网科,中游 infra,④,16.81,CNY,range小幅启动(1m+2.8%/3m-7%/rng36%/off-22%),🟡观望[trigger:1m 持续],网络安全小盘(下一代防火墙)
+2026-06-02,AIAgent中国,688256.SHG,寒武纪,上游材料,①④⑨,1238,CNY,range(1m-12.6%/3m+5%/rng27%/off-37%),🟡观望+跨主题⭐[同时跨自动驾驶],A 股 AI 芯片(思元推理)-市值~1.5万亿过大
+2026-06-02,AIAgent中国,688041.SHG,海光信息,上游材料,①⑨,275.36,CNY,extended边缘(rng49%/1m-1.2%/off-23%),🟡观望[trigger:回调],AI/CPU 芯片国产替代(深算 GPU)
+2026-06-02,AIAgent中国,300308.SHE,中际旭创,上游材料,①④,1130,CNY,extended(1m+34%/3m+112%/rng90%),🔴跳过+跨主题⭐[已抛物线-光模块全球龙头],800G/1.6T 光模块龙头-AI 数据中心主供
+2026-06-02,AIAgent中国,603296.SHG,华勤技术,上游材料,①④,117.04,CNY,extended(1m+14%/3m+27%/rng88%),🔴跳过[已抛物线],AI 服务器 ODM 代工
+2026-06-02,AIAgent中国,9988.HK,阿里巴巴,下游对照,排除,122.8,HKD,range深度底(1m-2.5%/3m-14%/rng9%/off-30%),🔴排除[下游巨头-但 rng9% 历史底-非 Serenity 猎物],电商+阿里云+通义千问+百炼 Agent
+2026-06-02,AIAgent中国,0700.HK,腾讯,下游对照,排除,436,HKD,range深度底(1m-6.8%/3m-15%/rng7%/off-32%),🔴排除[下游巨头-rng7% 历史底但 MC 4 万亿],微信+游戏+混元大模型
+2026-06-02,AIAgent中国,9888.HK,百度,下游对照,排除,129.1,HKD,range中位(1m+8.8%/3m+4.6%/rng45%),🔴排除[下游 LLM 巨头],搜索+文心一言+千帆 Agent
+2026-06-02,AIAgent中国,3690.HK,美团,下游对照,排除,78.25,HKD,range深度回调(1m-6%/3m-2.7%/rng17%/off-27%),🔴排除[下游巨头],本地生活+LongCat+内部 agents
+2026-06-02,AIAgent中国,9618.HK,京东,下游对照,排除,112.4,HKD,range(1m-3.4%/3m+8%/rng45%/off-15%),🔴排除[下游巨头],电商+京东云+言犀大模型

@@ -146,8 +146,22 @@
   .cnode.s-seed{border-left:3px solid var(--gray); opacity:.78}
   .cnode.is-bottleneck{box-shadow:0 0 0 2px var(--gold), 0 8px 18px -10px rgba(184,144,46,.5); background:linear-gradient(180deg, var(--surface) 0%, #fcf6e8 100%)}
   .cnode .star-inline{position:absolute; top:-9px; right:-7px; font-size:13px; color:var(--gold); filter:drop-shadow(0 1px 2px rgba(0,0,0,.25)); letter-spacing:-2px}
-  .cnode:hover{transform:translateY(-1px); box-shadow:0 4px 10px -4px rgba(0,0,0,.15)}
+  .cnode:hover{transform:translateY(-1px); box-shadow:0 4px 10px -4px rgba(0,0,0,.15); z-index:10}
   .cnode.is-bottleneck:hover{box-shadow:0 0 0 2px var(--gold), 0 8px 18px -8px rgba(184,144,46,.6)}
+  /* Custom hover tooltip 显示 data-desc(中文公司介绍,2026-06-02 加)*/
+  .cnode[data-desc]::after{
+    content:attr(data-desc); position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%) translateY(4px);
+    background:var(--ink); color:#f4efe5; padding:12px 16px; border-radius:6px; font-family:var(--body); font-weight:400;
+    font-size:13px; line-height:1.5; min-width:240px; max-width:340px; white-space:normal; text-align:left;
+    box-shadow:0 10px 30px -8px rgba(0,0,0,.5); border:1px solid var(--gold);
+    opacity:0; pointer-events:none; transition:opacity .2s, transform .2s; z-index:1000;
+  }
+  .cnode[data-desc]::before{
+    content:""; position:absolute; bottom:calc(100% + 2px); left:50%; transform:translateX(-50%);
+    border:6px solid transparent; border-top-color:var(--gold); opacity:0; transition:opacity .2s; z-index:1000;
+  }
+  .cnode[data-desc]:hover::after{opacity:1; transform:translateX(-50%) translateY(0)}
+  .cnode[data-desc]:hover::before{opacity:1}
   .chain-legend{display:flex; flex-wrap:wrap; gap:18px 24px; padding:14px 28px 4px; font-size:12px; color:var(--muted); font-family:var(--mono); border-top:1px dashed var(--line)}
   .chain-legend .item{display:flex; align-items:center; gap:7px}
   .chain-legend .swatch{width:24px; height:3px; border-radius:2px}

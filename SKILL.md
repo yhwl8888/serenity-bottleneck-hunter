@@ -128,6 +128,7 @@ description: 给定一个投资主题/趋势,复用交易者 Serenity(@aleabitor
 - `reference/report_template.html` —— **HTML 报告骨架 + 配色模板**(交付物按此生成,见"输出模板(HTML)")
 - `reference/example_commercial_space.md` —— worked example(商业航天),**示范分析内容与颗粒度**(报告格式以 HTML 模板为准)
 - `reference/glossary.md` —— **术语库**(120+ 条预填,LLM 自动 enrich);所有报告的 `<abbr>` 注释来源,新术语必须先 append 再用
+- `reference/company_desc.md` —— **公司简介库**(2026-06-02 加,用户反馈"chain-viz 节点很多公司不熟"驱动);所有 `.cnode` 必须有 `data-desc` 属性(30-60 字中文公司介绍),从本文件取;新标的 LLM 必须先 append 再用(同 glossary 模式,宁滥勿缺)。HTML 模板的 chain-viz JS 自动在 hover 时显示 `data-desc` 作为 tooltip。
 - `tracking/forward_picks.csv` + `tracking/score_tracker.py` —— 向前(样本外)跟踪表 + EODHD 打分脚本
 - `tracking/cross_theme_scan.py` + `tracking/cross_theme_index_snapshot.csv` —— **跨主题节点扫描**(Step 4 末尾强制跑)+ 最近一次快照
 

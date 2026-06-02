@@ -155,6 +155,42 @@
 - **AAPL.US** [2026-06-02] = Apple,M 系列芯片 + Apple Neural Engine + 设备生态。
 - **ZI.US** [2026-06-02] = ZoomInfo Technologies,B2B 销售情报数据库。
 
+### AI 安全层(2026-06-02 ETF audit 补 — IGV/CIBR 持仓发现)
+- **PANW.US** [2026-06-02] = Palo Alto Networks,企业级网络安全 + AI 防火墙巨头。AI Access Security(管员工/Agent 调用 LLM 流量)+ AI Runtime Security(保护 AI app)+ Prisma AIRS(2025 收购 Protect AI)。CIBR 第 2 大仓 10.23%。
+- **CRWD.US** [2026-06-02] = CrowdStrike,云原生端点安全龙头。Falcon Platform + Charlotte AI(对话式安全 Agent)。CIBR 第 1 大仓 10.66%。
+- **FTNT.US** [2026-06-02] = Fortinet,网络安全融合(SD-WAN + Firewall + Cloud)。FortiAI 是其内嵌 LLM 威胁分析。CIBR 第 3 大仓 8.83%。
+- **RBRK.US** [2026-06-02] = Rubrik,云数据保护 + DSPM(数据安全态势管理)。Ruby AI 是其 GenAI 安全运营助手。卡 AI agent 训练/RAG 的数据治理必经路径。2024 IPO。
+- **TENB.US** [2026-06-02] = Tenable,漏洞管理 + ExposureAI(AI 风险优先级排序)。
+- **QLYS.US** [2026-06-02] = Qualys,云原生漏洞 + 合规扫描。TruRisk AI 是其 AI 风险评估。
+- **SAIL.US** [2026-06-02] = SailPoint,身份治理(IAM 细分)。AI 身份分析。2025 重新 IPO(Thoma Bravo 私有化后)。
+- **OKTA.US** [2026-06-02] = Okta,企业身份认证 + SSO 龙头。Agent 调用 SaaS API 必经身份验证层。
+- **CHKP.US** [2026-06-02] = Check Point Software,以色列网络安全老牌(Infinity 平台 + AI 威胁防御)。
+- **AKAM.US** [2026-06-02] = Akamai,CDN + 边缘安全。Guardicore(2021 收购)做微分段。
+- **FFIV.US** [2026-06-02] = F5 Networks,应用流量管理 + 应用安全(API + bot defense)。
+- **GEN.US** [2026-06-02] = Gen Digital,消费安全(Norton + LifeLock + Avast 合并)。
+
+### AI 应用层(2026-06-02 ETF audit 补 — WCLD/IGV 持仓发现)
+- **FIVN.US** [2026-06-02] = Five9,云客服平台。Agentic AI(IVA + Agent Assist)是其 Genesys/NICE 对标 AI 客服 Agent 主线。
+- **TWLO.US** [2026-06-02] = Twilio,通信 API 平台(SMS/Voice/WhatsApp)+ Segment CDP + AI 客服 Agent。
+- **BRZE.US** [2026-06-02] = Braze,客户互动平台(消息/推送/邮件)+ AI 个性化营销 Agent。
+- **ZETA.US** [2026-06-02] = Zeta Global,AI 营销云 + ZOE 平台。
+- **PAYC.US** [2026-06-02] = Paycom,人力资源 SaaS(Beti 自助薪资 + AI HR Agent)。
+- **FRSH.US** [2026-06-02] = Freshworks,客服/IT 服务台 SaaS。Freddy AI 是其内嵌 AI Agent。
+- **IOT.US** [2026-06-02] = Samsara,Connected Operations 平台(车队/资产追踪)+ AI fleet/物联网 Agent。
+- **PD.US** [2026-06-02] = PagerDuty,事件响应 SaaS。AIOps + AI Agent 自动响应。
+- **DOCU.US** [2026-06-02] = DocuSign,电子签名龙头 + IAM(智能协议管理)+ AI 合同分析。
+- **ZM.US** [2026-06-02] = Zoom Communications,视频会议 + Zoom Phone + AI Companion(会议总结 Agent)。
+- **TEAM.US** [2026-06-02] = Atlassian,Jira/Confluence 工作管理。Rovo 是其 AI Agent(2024 发布)。
+- **WDAY.US** [2026-06-02] = Workday,人力资本 + 财务 SaaS。Workday AI(HR/Fin Agent)。
+- **FICO.US** [2026-06-02] = Fair Isaac,FICO 信用评分(消费金融行业标准)+ AI 决策 Agent。
+- **ROP.US** [2026-06-02] = Roper Technologies,垂直行业软件 conglomerate(Aderant/Deltek/Strata 等 30+ 子公司)。AI 在子公司内嵌。
+
+### AI Infra / Observability 层(2026-06-02 ETF audit 补)
+- **DT.US** [2026-06-02] = Dynatrace,APM + AIOps observability。Davis AI(因果推理 AI)。DDOG 主要对标。
+- **NTNX.US** [2026-06-02] = Nutanix,超融合基础设施 + 私有云。GPT-in-a-Box(私有部署 LLM 解决方案)。
+- **NTAP.US** [2026-06-02] = NetApp,企业存储 + AIPod(与 NVIDIA 合作的 AI 存储参考架构)。
+- **DOCN.US** [2026-06-02] = DigitalOcean,中小企业云平台。GPU 云 + AI infra(2024 转型)。
+
 ## AI Agent 经济(A股 + 港股)
 
 - **688256.SHG** [2026-06-02] = 寒武纪科技,A 股 AI 芯片厂(思元系列推理芯片)。

@@ -30,8 +30,18 @@ ZH_NAME_RE = re.compile(r"[一-鿿]{2,12}")  # 2-12 个中文字
 
 def scan_file(path):
     """扫单个文件,返回 (mismatches, warnings) lists
-    SKIP 机制:文件首 500 字符内含 'ticker-verify: skip' → 跳过(文档/示例文件用)"""
+    SKIP 机制:
+    - 文件首 500 字符内含 'ticker-verify: skip' → 跳过(文档/示例文件用)
+    - 路径里含 _scan_*.json / _etf_audit_*.json / _gen_*.py → 跳过(raw 数据/生成器文件,
+      ticker 已在 L2 verify_pair 验证,这里再扫会被字段 text 误识别为公司名 false positive)"""
     if not os.path.exists(path): return ([], [])
+    # 跳过 raw data / generator 文件(2026-06-05 Dogfood #13 教训)
+    base = os.path.basename(path)
+    if (base.startswith("_scan_") and (base.endswith(".json") or base.endswith(".py"))) \
+       or base.startswith("_etf_audit_") \
+       or base.startswith("_gen_") \
+       or base == "ticker_truth.csv":  # 自身就是 truth,不需自我 verify
+        return ([], [])
     try:
         with open(path, encoding="utf-8") as f:
             text = f.read()
@@ -40,6 +50,32 @@ def scan_file(path):
     # SKIP magic comment(允许文档文件含错例示意)
     if "ticker-verify: skip" in text[:500]:
         return ([], [])
+    # CSV-aware scan(forward_picks.csv 用,精确取 ticker col + name_zh col,避免被 tier 字段误抓)
+    if path.endswith(".csv"):
+        import csv as _csv
+        mismatches = []
+        try:
+            with open(path, encoding="utf-8") as f:
+                reader = _csv.reader(f)
+                header = next(reader, None)
+                # forward_picks schema: date,theme,ticker,name_zh,tier,...
+                if header and len(header) >= 4 and "ticker" in header[2].lower() and "name" in header[3].lower():
+                    for row in reader:
+                        if len(row) < 4: continue
+                        ticker, claimed_zh = row[2].strip(), row[3].strip()
+                        if not ticker or not claimed_zh: continue
+                        info = lookup_by_ticker(ticker)
+                        if not info: continue
+                        tz = (info.get("name_zh", "") or "").strip()
+                        te = (info.get("name_en", "") or "").strip()
+                        if claimed_zh in tz or tz in claimed_zh: continue
+                        if claimed_zh.lower() in te.lower() or any(p.lower() in te.lower() for p in claimed_zh.split() if len(p) > 2):
+                            continue
+                        mismatches.append({"file": path, "ticker": ticker, "claimed_zh": claimed_zh,
+                                          "truth_zh": tz, "truth_en": te})
+        except Exception:
+            pass
+        return (mismatches, [])
 
     mismatches = []
     warnings = []

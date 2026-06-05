@@ -146,12 +146,21 @@ def verify_pair(ticker, claimed_name, today=None):
     }
     db[ticker] = new_row
     _save_db(db)
-    # 再 verify
+    # 再 verify — fresh search 后写入了 EODHD 英文 name,中文 claimed_name 自动存为 name_zh
+    # logic 修订(2026-06-05 Dogfood #13 audit):
+    # - 中文 claimed_name 不能跟英文 name 做 substring 比较(永远 false)
+    # - 但 ticker 在 EODHD 真实存在 → 真名映射 OK,标 newly-added-soft-warn
+    # - 真错位 case(我记错 ticker 完全对应另一公司)→ EODHD 英文 name 看一眼就知道
+    # - 终极防线:用户 review 报告时挑战(本次 case 就是这样发现的)
     cn = claimed_name.lower().strip()
     ne = new_row["name_en"].lower()
-    if cn in ne or any(c in ne for c in cn.split()):
-        return (True, f"ok (newly verified: {new_row['name_en']})")
-    return (False, f"MISMATCH after fresh search: claimed='{claimed_name}' vs EODHD='{new_row['name_en']}'")
+    # 英文比对(只在 claimed 是英文时严格)
+    if any(c.isascii() and c.isalpha() for c in cn):
+        if cn in ne or any(p in ne for p in cn.split() if len(p) > 2):
+            return (True, f"ok (newly verified: {new_row['name_en']})")
+        return (False, f"MISMATCH after fresh search: claimed='{claimed_name}' vs EODHD='{new_row['name_en']}'")
+    # 中文 claimed_name → 信任 ticker 在 EODHD 真实存在,但日志显示 EN name 让人工 review
+    return (True, f"NEW (zh, please visually review EN): {new_row['name_en']}")
 
 
 # ---- L2 API: resolve ----

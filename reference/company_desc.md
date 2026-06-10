@@ -186,6 +186,27 @@
 - **FICO.US** [2026-06-02] = Fair Isaac,FICO 信用评分(消费金融行业标准)+ AI 决策 Agent。
 - **ROP.US** [2026-06-02] = Roper Technologies,垂直行业软件 conglomerate(Aderant/Deltek/Strata 等 30+ 子公司)。AI 在子公司内嵌。
 
+### 网络安全板块补充(2026-06-05 Dogfood #15,ETF audit CIBR+BUG+HACK)
+- **NTSK.US** [2026-06-05] = Netskope,SSE(安全服务边缘)纯 play,Zscaler 直接对手。2025-09 IPO 后破发。
+- **VRNS.US** [2026-06-05] = Varonis Systems,DSPM 数据安全态势管理(文件/SaaS 数据权限分析),AI 数据治理标的。
+- **CVLT.US** [2026-06-05] = Commvault,企业数据备份恢复老牌,云转型中(Rubrik 的传统对手)。
+- **RDWR.US** [2026-06-05] = Radware,以色列 DDoS 防护 + 应用安全。
+- **RPD.US** [2026-06-05] = Rapid7,漏洞管理 + SIEM(InsightIDR)+ MDR 服务,长期落后于 TENB/QLYS,PE 收购传闻常客。
+- **300454.SHE** [2026-06-05] = 深信服(Sangfor),A 股安全+云计算双主业,民企市场份额第一,SASE/超融合。
+- **002212.SHE** [2026-06-05] = 天融信(Topsec),国内第一台自研防火墙厂商,政企安全老牌。
+- **300369.SHE** [2026-06-05] = 绿盟科技(NSFOCUS),攻防研究/漏洞挖掘强项,安全服务+设备。
+- **601360.SHG** [2026-06-05] = 三六零(360),消费安全入口 + 政企安全 + AI 大模型(纳米搜索)双题材。
+- **688023.SHG** [2026-06-05] = 安恒信息(DBAPPSecurity),安全运营 SOC + MSS 托管服务 + 数据安全。
+- **300768.SHE** [2026-06-05] = 迪普科技(DPtech),网络安全设备 + 应用交付(国产 F5 对标)。
+- **002268.SHE** [2026-06-05] = 电科网安(Westone,原卫士通),中国电科旗下商用密码国家队,密码安全核心。
+- **603232.SHG** [2026-06-05] = 格尔软件(Koal),PKI 公钥基础设施龙头,密码应用。
+- **688201.SHG** [2026-06-05] = 信安世纪(Infosec Tech),密码技术 + 信创安全。
+- **300352.SHE** [2026-06-05] = 北信源(VRV),终端安全管理 + 安全准入。
+- **300659.SHE** [2026-06-05] = 中孚信息(Zhongfu),保密安全(党政军涉密信息系统)。
+- **300188.SHE** [2026-06-05] = 美亚柏科(Meiya Pico),电子数据取证第一,国投智能旗下,公安政法市场。
+- **688168.SHG** [2026-06-05] = 安博通(ABT Networks),安全策略可视化 + 网关。
+- **CYBR(已退市)** [2026-06-05] = CyberArk,PAM 特权账户管理近垄断 — 2025 被 PANW ~$25B 收购退市,标 acquired。
+
 ### AI Infra / Observability 层(2026-06-02 ETF audit 补)
 - **DT.US** [2026-06-02] = Dynatrace,APM + AIOps observability。Davis AI(因果推理 AI)。DDOG 主要对标。
 - **NTNX.US** [2026-06-02] = Nutanix,超融合基础设施 + 私有云。GPT-in-a-Box(私有部署 LLM 解决方案)。
@@ -231,7 +252,8 @@
 - **RDW.US** [2026-06-02] = Redwire,空间太阳能阵(ROSA)+ 星敏感器。
 - **JOBY.US** [2026-06-02] = Joby Aviation,eVTOL(电动垂直起降)飞行汽车,Toyota 投资。
 - **ACHR.US** [2026-06-02] = Archer Aviation,eVTOL 飞行汽车,Stellantis 投资。
-- **EHGO.US** [2026-06-02] = EHang Holdings,中国 eVTOL 公司。
+- **EH.US** [2026-06-05] = 亿航智能(EHang Holdings),中国 eVTOL,全球唯一载人无人驾驶航空器适航三证(型号合格证+生产许可+标准适航证)。**注意**:此前误用 EHGO.US(实为 Eshallgo 办公设备)— 2026-06-05 hook 追溯拦截修复。
+- **EHGO.US** [2026-06-05] = Eshallgo,中国办公设备/打印服务微盘股。非 eVTOL — 此前被错标为亿航,已修复。
 
 ## A 股半导体(韬定律)
 
@@ -261,7 +283,8 @@
 - **3324.TW** [2026-06-02] = 双鸿科技,台湾笔电散热龙头。
 - **3483.TWO** [2026-06-02] = 力致科技,台湾散热模组公司。
 - **0522.HK** [2026-06-02] = ASMPT,香港上市的封装设备公司。
-- **ASEKY.US** [2026-06-02] = ASE Technology Holdings ADR(日月光),台湾封测综合大厂 ADR。
+- **ASX.US** [2026-06-05] = 日月光 ASE(ASE Industrial Holding ADR),台湾封测 OSAT 综合大厂。**注意**:此前误用 ASEKY.US(实为爱信精机)— 2026-06-05 hook 追溯拦截修复。
+- **ASEKY.US** [2026-06-05] = 爱信精机(Aisin Seiki),日本汽车零部件(丰田系,变速箱/车身件)。非半导体公司 — 此前被错标为 ASE 日月光,已修复。
 - **LPL.US** [2026-06-02] = LG Display ADR,韩国 OLED 屏幕(笔电 + 电视屏)。
 - **005930.KO** [2026-06-02] = Samsung Electronics,韩国半导体 + 显示综合巨头。
 - **000660.KO** [2026-06-02] = SK Hynix,韩国 LPDDR + HBM 第 2 大供应商。

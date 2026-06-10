@@ -50,6 +50,29 @@ def scan_file(path):
     # SKIP magic comment(允许文档文件含错例示意)
     if "ticker-verify: skip" in text[:500]:
         return ([], [])
+    # company_desc.md 专用精确解析(2026-06-05 Dogfood #15 教训:通用窗口启发式产生 156 个 false positive)
+    # 行格式: - **TICKER** [YYYY-MM-DD] = 公司名,描述...
+    if os.path.basename(path) == "company_desc.md":
+        line_re = re.compile(r'^- \*\*([\w\.\-]+(?:\.[A-Z]{1,4})?)\*\*(?:\s*\[\d{4}-\d{2}-\d{2}\])?\s*=\s*([^,,(（。]+)', re.M)
+        mismatches = []
+        for m in line_re.finditer(text):
+            ticker, claimed = m.group(1).strip(), m.group(2).strip()
+            if "." not in ticker: continue
+            info = lookup_by_ticker(ticker)
+            if not info: continue
+            tz = (info.get("name_zh", "") or "").strip()
+            te = (info.get("name_en", "") or "").strip()
+            cl = claimed.lower()
+            if claimed in tz or tz in claimed: continue
+            if cl in te.lower() or any(p in te.lower() for p in cl.split() if len(p) > 2): continue
+            # 宽容规则:中文 2 字公共子串即视为同一公司的别名变体(村田制作所 vs 村田Murata)
+            # 真错位 case(绿的谐波 vs 永新光学)无公共子串,仍会被拦
+            zh_chars = [c for c in claimed if '一' <= c <= '鿿']
+            if any(claimed[i:i+2] in tz for i in range(len(claimed)-1) if '一' <= claimed[i] <= '鿿'):
+                continue
+            mismatches.append({"file": path, "ticker": ticker, "claimed_zh": claimed,
+                              "truth_zh": tz, "truth_en": te})
+        return (mismatches, [])
     # CSV-aware scan(forward_picks.csv 用,精确取 ticker col + name_zh col,避免被 tier 字段误抓)
     if path.endswith(".csv"):
         import csv as _csv

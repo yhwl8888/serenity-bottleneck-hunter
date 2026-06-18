@@ -120,7 +120,7 @@ description: 给定一个投资主题/趋势,复用交易者 Serenity(@aleabitor
 
 > **交付物 = 一个自包含 HTML 文件**(单文件、样式内联,仅 Google Fonts 可外链),写到 `reports/<主题>_分析报告.html`。骨架与配色复用 `reference/report_template.html`。生成后 `Start-Process <file>.html`(Win)/ `open`(mac)打开。
 >
-> **生成方式(硬规则)**:报告 = **克隆最近一份合格报告的完整外壳**(head CSS + body 末尾全部脚本 reveal/术语/chain-draw),只替换内容(候选/产业链节点/文字)。**严禁手搓 body 或把 chain-viz 画成静态简版**——chain-viz 必须是 `.cnode`+`.edge-list` 真组件喂 `layoutChain` 自动绘制判定。因预算/复杂度砍任何既定标准,**当场说明、不把缩水版当完整品交**。〔教训:契约≠保真,我把"过自己造的闸"当"做好了" → lessons.md#chain-viz-fidelity〕
+> **生成方式(硬规则)**:报告**必须用 `scripts/render_report.py` 渲染**——agent 只写一个薄「主题 SPEC」(纯数据:候选 / §A§B / 产业链节点+依赖边 / 文字;示例 `tracking/_gen_mlcc_report.py`),引擎负责:克隆最近一份合格报告的完整外壳(CSS + reveal/术语/chain-draw 脚本)、拉 scan 价(零手填)、渲染**真 chain-viz**(`.cnode`+`.edge-list` 喂 `layoutChain` 自动绘制判瓶颈)、水位标尺三价、§A 红队 + §B 证伪、写 forward_picks。**严禁绕过引擎手搓 HTML / 画静态简版 chain-viz**——引擎是唯一路,产出**过 verify_report by construction**。因预算/复杂度砍任何既定标准,**当场说明、不把缩水版当完整品交**。〔教训:契约≠保真,把"过自己造的闸"当"做好了" → lessons.md#chain-viz-fidelity〕
 >
 > **report_template.html 已内置的模板特征(生成时必用)**:① **本次行动点**——头条位最多 2 张行动卡(设什么警报 / 什么条件做什么),无视排序置顶,读者 10 秒拿到本次唯一要做的事;② **水位标尺**——动量用 贴顶/高位/中位/低位/贴底 + 距高点% + 1m/3m 的人话化标尺,且**标尺两端标 6 个月最低/最高价、游标上方标现价**(6 月低/高/现价三价,币种按交易所后缀);③ **产业链双规则瓶颈判定**——漏斗型(入度≥2 出度≤1,金边)+ 枢纽型(入度≥2 出度≥2,多对多最难绕开,酒红边);④ **判定史**——同标的历史判定(旧价→今价 ±%、对错复盘),体现框架连续性与诚实度;⑤ **§A 红队 + §B 证伪**——每候选折叠红队、🟢 带证伪(本次 Tier-1 新增,见上)。
 
@@ -196,7 +196,8 @@ EODHD_API_KEY=… python scripts/verify_report.py reports/<主题>_分析报告.
 - `reference/methodology.md` —— 完整方法论(理念、筛选清单、两套择时、回避清单、风险)
 - `reference/supply-chain-and-archetypes.md` —— 元框架、产业链速查表、**Part D 9 大瓶颈原型库**、EODHD 数据映射
 - `reference/report_template.html` —— **HTML 报告骨架 + 配色模板**
-- `scripts/verify_report.py` —— **交付契约 linter**(报告生成后必跑;查区块齐全 / §A§B / 标尺三价 / 价格对账 scan / 入轨 forward_picks / 状态日期 / 占位符,有【拦】先修再交付)
+- `scripts/render_report.py` —— **报告统一渲染引擎**(克隆合格报告外壳 + 数据驱动渲染真 chain-viz / 标尺三价 / §A§B / forward_picks;agent 只写薄主题 SPEC,示例 `tracking/_gen_mlcc_report.py`)
+- `scripts/verify_report.py` —— **交付契约 linter**(报告生成后必跑;查区块齐全 / §A§B / 标尺三价 / 价格对账 scan / 入轨 forward_picks / 真 chain-viz / 揭示类脚本 / 占位符,有【拦】先修再交付)
 - `reference/example_commercial_space.md` —— worked example(商业航天),示范分析内容与颗粒度
 - `reference/glossary.md` —— **术语库**(120+ 条,LLM 自动 enrich);报告 `<abbr>` 注释来源
 - `reference/company_desc.md` —— **公司业务描述库**:只存 business(主营/产业链位置/技术/客户),**严禁含 price/stage/估值等动态数据**。格式 `- **SYM.EX** [YYYY-MM-DD] = 业务描述`,每条带 last_updated 时间戳。

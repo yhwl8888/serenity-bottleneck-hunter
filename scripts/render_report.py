@@ -26,6 +26,42 @@ def cy(tk): return CCY.get(tk.split(".")[-1], "$")
 def word(r): return "贴顶" if r>=90 else "高位" if r>=70 else "中位" if r>=30 else "低位" if r>=10 else "贴底"
 def scls(r): return "ext" if r>=88 else ("early" if r<60 else "range")
 
+def justify(d):
+    """二轴判定的第二轴:这波涨基本面跟不跟得上 → 区分「贵但对(动量龙头)」vs「真贴顶(纯重估)」。
+    输入 scan 字段:rng + ret_3m + forward_pe/trailing_pe/peg/eps_growth/rev_growth + rs_rank/rs_total。
+    返回 (hint, 内联样式的显示串)。数据缺失(A股常缺 forward/PEG)优雅降级,不强判。"""
+    rng = d.get("range_pos_6mo_pct", 50); r3 = d.get("ret_3m_pct") or 0
+    fpe, tpe, peg = d.get("forward_pe"), d.get("trailing_pe"), d.get("peg")
+    epsg, revg = d.get("eps_growth"), d.get("rev_growth")
+    rs, rst = d.get("rs_rank"), d.get("rs_total")
+    mult = None
+    if fpe and tpe and fpe > 0 and tpe > 0:
+        mult = "压缩" if fpe < tpe * 0.95 else ("扩张" if fpe > tpe * 1.05 else "持平")
+    growth = epsg if epsg is not None else revg
+    lead = (growth is not None and growth >= r3 * 0.6)        # 盈利/营收增速跟得上涨幅
+    leader = bool(rs and rst and rs <= max(1, rst / 3))
+    laggard = bool(rs and rst and rs > rst * 2 / 3)
+    score = 0
+    score += 1 if mult == "压缩" else (-1 if mult == "扩张" else 0)
+    score += 1 if (peg is not None and 0 < peg <= 2) else (-1 if (peg is not None and peg > 3) else 0)
+    score += 1 if (growth is not None and lead) else (-1 if (growth is not None and not lead and growth < 10) else 0)
+    score += 1 if leader else (-1 if laggard else 0)
+    if rng >= 85:
+        hint = "贵但对" if score >= 1 else ("真贴顶" if score <= -1 else "高位待判")
+    elif rng <= 30:
+        hint = "低位埋伏" if score >= 0 else "低位落后"
+    else:
+        hint = "中位"
+    color = {"贵但对": "var(--green)", "低位埋伏": "var(--green)", "真贴顶": "var(--red)",
+             "低位落后": "var(--red)"}.get(hint, "var(--muted)")
+    def s(v): return v if v is not None else "—"
+    parts = [f"fwdP/E {s(fpe)}" + (f"·{mult}" if mult else ""), f"PEG {s(peg)}",
+             (f"盈利{epsg:+.0f}%" if epsg is not None else (f"营收{revg:+.0f}%" if revg is not None else "增速—")),
+             (f"RS {rs}/{rst}" if rs else "")]
+    disp = ('<br><span style="font-size:10px;color:var(--faint)">第二轴 · ' + " · ".join(p for p in parts if p)
+            + f' → <b style="color:{color}">{hint}</b></span>')
+    return hint, disp
+
 def ruler(S, tk):
     d=S[tk]; c=cy(tk); r=d["range_pos_6mo_pct"]; cl=scls(r); clamp=min(90,max(10,r))
     return (f'<div class="mo s-{cl}"><div class="ends"><span>6月低 <b>{c}{d["low_6mo"]:.2f}</b></span>'
@@ -33,7 +69,7 @@ def ruler(S, tk):
             f'<div class="gauge"><div class="track"></div><div class="dot" style="left:{r}%"></div>'
             f'<span class="cur" style="left:{clamp}%">{c}{d["last"]:.2f}</span></div>'
             f'<div class="lbl"><span class="word">{word(r)}</span> · 距高点 <b>{d["pct_off_6mo_high"]:.1f}%</b><br>'
-            f'近1月 <b>{(d["ret_1m_pct"] or 0):+.1f}%</b> · 近3月 <b>{(d["ret_3m_pct"] or 0):+.1f}%</b></div></div>'
+            f'近1月 <b>{(d["ret_1m_pct"] or 0):+.1f}%</b> · 近3月 <b>{(d["ret_3m_pct"] or 0):+.1f}%</b>{justify(d)[1]}</div></div>'
             f'<div class="stage-t {cl}">{("EXTENDED" if cl=="ext" else "EARLY-UP" if cl=="early" else "RANGE/BASE")}'
             f'<small>{("已抛物线" if cl=="ext" else "刚启动" if cl=="early" else "横盘/回调")}</small></div>')
 
@@ -128,13 +164,15 @@ def _write_fp(spec, S):
     theme=spec["theme_tag"]; n=0
     with open(fp,"a",encoding="utf-8",newline="") as f:
         w=csv.writer(f)
+        TIERZH = {"green": "上游咽喉", "amber": "观察", "red": "排除"}      # 🔴 也入库:score_tracker 🟢-vs-🔴 内部对照需反面参照
+        VERD = {"green": "候选/Mode-A 小仓", "amber": "观望/等回调", "red": "排除/反面参照"}
         for x in spec["candidates"]:
-            if x["v"] not in ("green","amber") or (theme,x["tk"]) in existing: continue
-            d=S[x["tk"]]
-            w.writerow([spec["date"],theme,x["tk"],d["name_zh"],{"green":"上游咽喉","amber":"观察"}[x["v"]],x["arch"],
-                        f'{d["last"]:.2f}',{"¥":"CNY/JPY","NT$":"TWD","₩":"KRW"}.get(cy(x["tk"]),"USD"),
-                        d.get("stage","")[:30],{"green":"候选/Mode-A 小仓","amber":"观望/等回调"}[x["v"]],x["th"][:60],x.get("inv","")])
-            n+=1
+            if x["v"] not in TIERZH or (theme, x["tk"]) in existing: continue
+            d = S[x["tk"]]
+            w.writerow([spec["date"], theme, x["tk"], d["name_zh"], TIERZH[x["v"]], x["arch"],
+                        f'{d["last"]:.2f}', {"¥":"CNY/JPY","NT$":"TWD","₩":"KRW"}.get(cy(x["tk"]), "USD"),
+                        d.get("stage","")[:30], VERD[x["v"]], x["th"][:60], x.get("inv","")])
+            n += 1
     print(f"forward_picks +{n}")
 
 if __name__ == "__main__":

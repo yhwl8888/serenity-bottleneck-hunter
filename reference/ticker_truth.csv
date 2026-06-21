@@ -32,6 +32,7 @@ ticker,name_en,name_zh,exchange,sector,last_verified,source
 002414.SHE,Wuhan Guide Infrared Co Ltd,高德红外,SHE,Common Stock,2026-06-09,EODHD search
 002415.SHE,Hangzhou Hikvision Digital Technology Co Ltd,海康威视,SHE,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 002439.SHE,Beijing Venustech Inc,启明星辰,SHE,Common Stock,2026-06-05,EODHD init batch 2026-06-05
+002463.SHE,"Wus Printed Circuit (Kunshan) Co., Ltd.",沪电股份 Wus,SHE,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 002472.SHE,Zhejiang Shuanghuan Driveline Co Ltd,双环传动,SHE,Common Stock,2026-06-05,EODHD search
 002475.SHE,Luxshare Precision Industry Co Ltd,立讯精密,SHE,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 002527.SHE,Shanghai STEP Electric Corp,新时达,SHE,Common Stock,2026-06-05,EODHD search
@@ -40,6 +41,8 @@ ticker,name_en,name_zh,exchange,sector,last_verified,source
 002747.SHE,Nanjing ESTUN Automation Co Ltd,埃斯顿,SHE,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 002859.SHE,Zhejiang Jiemei Electronic and Technology Co Ltd,洁美科技Jmei,SHE,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 002896.SHE,Ningbo ZhongDa Leader Intelligent Transmission Co Ltd,中大力德,SHE,Common Stock,2026-06-05,EODHD search
+002916.SHE,"Shennan Circuits Co., Ltd.",深南电路 SCC,SHE,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
+002938.SHE,"Avary Holding(Shenzhen)Co., Limited",鹏鼎控股 ZhenDing,SHE,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 002979.SHE,China Leadshine Technology Co Ltd,雷赛智能,SHE,Common Stock,2026-06-05,EODHD search
 005930.KO,Samsung Electronics Co Ltd,Samsung Electronics,KO,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 009150.KO,Samsung Electro-Mechanics Co Ltd,三星电机SamsungEM,KO,Common Stock,2026-06-17,yfinance longName verify 2026-06-17
@@ -68,6 +71,7 @@ ticker,name_en,name_zh,exchange,sector,last_verified,source
 300369.SHE,Nsfocus Information Technology Co Ltd,绿盟科技,SHE,Common Stock,2026-06-10,EODHD search
 300408.SHE,Chaozhou Three-Circle Group Co Ltd,三环集团CCTC,SHE,Common Stock,2026-06-17,yfinance longName verify 2026-06-17
 300454.SHE,Sangfor Technologies Inc Class A,深信服,SHE,Common Stock,2026-06-10,EODHD search
+300476.SHE,"Victory Giant Technology (HuiZhou) Co.,Ltd",胜宏科技 VictoryG,SHE,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 300580.SHE,Wuxi Best Precision Machinery Co Ltd,贝斯特,SHE,Common Stock,2026-06-05,EODHD search
 300607.SHE,Guangdong Topstar Technology Co Ltd,拓斯达,SHE,Common Stock,2026-06-05,EODHD search
 300659.SHE,Zhongfu Information Inc,中孚信息,SHE,Common Stock,2026-06-10,EODHD search
@@ -87,6 +91,7 @@ ticker,name_en,name_zh,exchange,sector,last_verified,source
 5392.TWO,AVY Precision Technology,Auras Technology,TWO,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 5727.T,Toho Titanium Co Ltd,东邦钛业,TSE,Common Stock,2026-06-05,manual 2026-06-05
 600038.SHG,Avicopter PLC,中直股份,SHG,Common Stock,2026-06-09,EODHD search
+600183.SHG,"Shengyi Technology Co.,Ltd.",生益科技 Shengyi,SHG,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 600399.SHG,Fushun Special Steel Co Ltd,抚顺特钢,SHG,Common Stock,2026-06-09,EODHD search
 600584.SHG,JCET Group Co Ltd,长电科技,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 600588.SHG,Yonyou Network Technology Co Ltd,用友网络,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
@@ -99,7 +104,10 @@ ticker,name_en,name_zh,exchange,sector,last_verified,source
 603009.SHG,Shanghai Beite Technology Co,北特科技,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 603019.SHG,Dawning Information Industry Co Ltd,中科曙光,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 603039.SHG,Shanghai Weaver Network Co Ltd,泛微网络,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
+603186.SHG,"Zhejiang Wazam New Materials Co.,LTD.",华正新材 Huazheng,SHG,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
+603228.SHG,"Shenzhen Kinwong Electronic Co., Ltd.",景旺电子 Kinwong,SHG,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 603232.SHG,Shanghai Koal Software Co Ltd,格尔软件,SHG,Common Stock,2026-06-10,EODHD search
+603256.SHG,"Grace Fabric Technology Co.,Ltd.",宏和科技 Honghe,SHG,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 603296.SHG,HUAQIN TECHNOLOGY LTD A,华勤技术,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 603297.SHG,Ningbo Yongxin Optics Co Ltd,永新光学,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 603305.SHG,Ningbo Xusheng Auto Technology Co Ltd,旭升集团,SHG,Common Stock,2026-06-05,EODHD search
@@ -111,6 +119,7 @@ ticker,name_en,name_zh,exchange,sector,last_verified,source
 603766.SHG,Loncin Motor Co Ltd,隆鑫通用,SHG,Common Stock,2026-06-09,EODHD search
 603767.SHG,Zhejiang Zomax Transmission,中马传动,SHG,Common Stock,2026-06-05,EODHD search
 605376.SHG,Jiangsu Boqian New Materials Stock Co Ltd,博迁新材Boqian,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
+605589.SHG,"Jinan Shengquan Group Share Holding Co., Ltd.",圣泉集团 Shengquan,SHG,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 6268.T,Nabtesco Corp,Nabtesco RV减速器,TSE,Common Stock,2026-06-05,manual 2026-06-05
 6324.T,Harmonic Drive Systems Inc,Harmonic Drive 谐波减速器全球#1,TSE,Common Stock,2026-06-05,manual 2026-06-05
 6506.T,Shuang-Bang Industrial,Yaskawa,TWO,Common Stock,2026-06-05,EODHD init batch 2026-06-05
@@ -130,12 +139,14 @@ ticker,name_en,name_zh,exchange,sector,last_verified,source
 688158.SHG,UCloud Technology Co Ltd,优刻得,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 688160.SHG,Kinco Automation (Shanghai) Co. Ltd. A,步科股份,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 688168.SHG,Beijing Abt Networks Co Ltd,安博通,SHG,Common Stock,2026-06-10,EODHD search
+688183.SHG,"Shengyi Electronics Co., Ltd.",生益电子 ShengyiE,SHG,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 688201.SHG,Beijing Infosec Technologies Co. Ltd. A,信安世纪,SHG,Common Stock,2026-06-10,EODHD search
 688256.SHG,Cambricon Technologies Corp Ltd,寒武纪,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 688297.SHG,AVIC (Chengdu) UAS Co. Ltd. A,中无人机,SHG,Common Stock,2026-06-09,EODHD search
 688320.SHG,Zhejiang He Chuan Technology Corp. Ltd. A,禾川科技,SHG,Common Stock,2026-06-05,EODHD search
 688333.SHG,Xi an Bright Laser Tech Co Ltd,铂力特,SHG,Common Stock,2026-06-09,EODHD search
 688369.SHG,Beijing Seeyon Internet Software Cp,致远互联,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
+688519.SHG,"Nanya New Material Technology Co.,Ltd",南亚新材 NanyaNM,SHG,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 688561.SHG,Qi An Xin Technology Group Inc,奇安信,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 688787.SHG,Beijing Haitian Ruisheng Science Technology Ltd,海天瑞声,SHG,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 6954.T,Fanuc Corp,Fanuc 工业机器人,TSE,Common Stock,2026-06-05,manual 2026-06-05
@@ -177,12 +188,14 @@ BB.US,BlackBerry Ltd,BlackBerry,US,Common Stock,2026-06-05,EODHD init batch 2026
 BIDU.US,Baidu Inc,百度,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 BILL.US,Bill Com Holdings Inc,BILL Holdings,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 BRZE.US,Braze Inc,Braze,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
+CAMT.US,Camtek Ltd.,Camtek,US,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 CAT.US,Caterpillar Inc,Caterpillar,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 CDNS.US,Cadence Design Systems Inc,Cadence,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 CEVA.US,CEVA Inc,CEVA,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 CFLT.US,Confluent Inc,Confluent Kafka,US,Common Stock,2026-06-05,manual 2026-06-05
 CGNX.US,Cognex Corporation,Cognex,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 CHKP.US,Check Point Software Technologies Ltd,Check,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
+CLS.US,Celestica Inc.,Celestica,US,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 CRM.US,Salesforce.com Inc,Salesforce,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 CRNC.US,Cerence Inc,Cerence,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 CRS.US,Carpenter Technology,卡彭特技术,NYSE,Specialty Metals,2026-06-12,eodhd+web
@@ -190,6 +203,7 @@ CRWD.US,Crowdstrike Holdings Inc,CrowdStrike,US,Common Stock,2026-06-05,EODHD in
 CTS.US,VietinBank Securities JSC,CTS Corp,VN,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 CVLT.US,CommVault Systems Inc,Commvault,US,Common Stock,2026-06-10,EODHD search
 DBX.US,Dropbox Inc,Dropbox,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
+DD.US,"DuPont de Nemours, Inc.",DuPont,US,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 DDOG.US,Datadog Inc,Datadog,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 DE.US,Deere & Company,Deere,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 DOCN.US,DigitalOcean Holdings Inc,DigitalOcean,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
@@ -266,6 +280,7 @@ PANW.US,Palo Alto Networks Inc,Palo,US,Common Stock,2026-06-05,EODHD init batch 
 PATH.US,Uipath Inc,UiPath,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 PAYC.US,"Paycom Software, Inc.",Paycom,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 PD.US,Pagerduty Inc,PagerDuty,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
+PKE.US,Park Aerospace Corp.,Park Aerospace,US,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 PL.US,Planet Labs,行星实验室,NYSE,Aerospace & Defense,2026-06-12,eodhd+web
 PLTR.US,Palantir Technologies Inc.,Palantir,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 POWI.US,Power Integrations Inc,Power Integrations,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
@@ -276,6 +291,7 @@ RBRK.US,"Rubrik, Inc.",Rubrik,US,Common Stock,2026-06-05,EODHD init batch 2026-0
 RDW.US,Redwire Corp,Redwire,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 RDWR.US,Radware Ltd,Radware,US,Common Stock,2026-06-10,EODHD search
 RKLB.US,Rocket Lab USA Inc.,Rocket Lab,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
+ROG.US,Rogers Corporation,Rogers,US,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 ROK.US,Rockwell Automation Inc,Rockwell,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 ROP.US,Roper Technologies Inc,Roper,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 RPD.US,Rapid7 Inc,Rapid7,US,Common Stock,2026-06-10,EODHD search
@@ -304,6 +320,7 @@ TSEM.US,Tower Semiconductor Ltd,Tower Semi,TA,Common Stock,2026-06-05,EODHD init
 TSLA.US,Tesla Inc,Tesla,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 TSM.US,Taiwan Semiconductor Manufacturing,台积电 TSMC,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 TTDKY.US,TDK Corp ADR,TDK,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
+TTMI.US,"TTM Technologies, Inc.",TTM Technologies,US,Common Stock,2026-06-21,yfinance longName verify 2026-06-21
 TWLO.US,Twilio Inc,Twilio,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 VICR.US,Vicor Corporation,Vicor,US,Common Stock,2026-06-05,EODHD init batch 2026-06-05
 VNP.TO,5N Plus Inc.,5N Plus,TO,Common Stock,2026-06-05,EODHD init batch 2026-06-05

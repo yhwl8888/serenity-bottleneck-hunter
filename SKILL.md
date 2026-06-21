@@ -109,6 +109,15 @@ description: 给定一个投资主题/趋势,复用交易者 Serenity(@aleabitor
 
 回测依据(11 只光子学标的):首 call 多在前 6 月区间 86%-237% 高位入场,之后 2-6 个月中位 ~+277%。→ **早于主题、容忍不抄底**才是 alpha 来源(注:此为逻辑自洽校准,非业绩,见"验证状态")。
 
+**判定二轴(2026-06-21 核心修正):水位 ≠ 判定。** 高水位(rng 高、贴顶)**不再自动 = 🟡**——单看水位是「均值回归」伪装成「动量」,会系统性把热门板块的真龙头判成"别追"、错过最大涨幅(闪迪式 melt-up)。判定必须叠加**第二轴:这波涨基本面跟不跟得上**——`price.py` 的 `valuation()` 出 forward P/E / PEG / 盈利&营收增速,扫描算 RS-rank(同主题内 3 月动量排名),Step 1 出周期 runway(早/中/晚)。`render_report` 标尺自动显示第二轴 + 给 hint:
+
+| | 基本面跟得上(forward P/E 压缩 / PEG≤2 / 盈利增速≥涨幅 / RS 领头 / 周期早) | 跟不上(纯重估 / forward P/E 扩张 / 周期晚 / RS 落后) |
+|---|---|---|
+| **高水位(贴顶)** | 🟢 **贵但对**——动量龙头,Mode A 持有/可加,**别 fade** | 🔴 **真贴顶**——再涨是博傻,回避 |
+| **低水位** | 🟢 经典埋伏(Mode A 早 / Mode B 超跌) | 🔴 落后有原因,排除 |
+
+**A股 forward/PEG 常缺**(yfinance 估计覆盖薄)→ 退化用"盈利/营收增速 vs 涨幅"+ RS;标尺显示"—"即数据缺、不强判。**limit**:顶 vs 续涨本质难判,二轴只 tilt 概率、不根治,新规则对不对靠 L1 向前跟踪校准。〔教训:水位标尺均值回归伪装动量、系统性反龙头 → lessons.md#water-level-2axis〕
+
 **价格纪律(硬规则)**:
 - **强制用 `scripts/price.py` 拉真实价格**(provider 自动回退:**EODHD(`EODHD_API_KEY`)→ yfinance**),输出 6 月区间位置、距高点、近 1/3 月动量、stage 标签。**严禁 WebSearch 抓价格、严禁凭印象猜 early/extended**——猜测 = 流程错误。海外股若 yfinance 拿不到,让用户提供 EODHD key 或换可解析代码重跑,不降级为定性。
 - **批量拉价必须走 price.py 接口**:`python -c "from scripts.price import analyze; print(analyze('6324.T'))"` 或脚本里 `from scripts.price import fetch_history`。**禁止 inline `Invoke-RestMethod` 调 EODHD**(绕过 yfinance fallback)。〔教训:物理 AI v1 漏 4 只日股 → lessons.md#price-interface〕

@@ -109,6 +109,33 @@ def analyze(symbol, days=400):
     }
 
 
+def valuation(yf_symbol, info=None):
+    """估值/速度字段 —— 二轴判定的「基本面跟不跟得上」轴(价格水位之外的第二轴)。
+    走 yfinance .info(EODHD fundamentals 对免费 key 403)。A股常缺 forward/PEG → 优雅降级为 None。
+    传入已取的 info 可复用(扫描里取名字那次),避免重复 HTTP。
+    返回:forward_pe / trailing_pe / peg / eps_growth(%) / rev_growth(%)。"""
+    out = {"forward_pe": None, "trailing_pe": None, "peg": None, "eps_growth": None, "rev_growth": None}
+    if info is None:
+        try:
+            import yfinance as yf
+            info = yf.Ticker(yf_symbol).info or {}
+        except Exception:
+            return out
+    def g(k):
+        v = info.get(k)
+        return round(float(v), 2) if isinstance(v, (int, float)) and v == v else None  # v==v 排 nan
+    out["forward_pe"] = g("forwardPE")
+    out["trailing_pe"] = g("trailingPE")
+    out["peg"] = g("pegRatio") or g("trailingPegRatio")
+    eg = g("earningsGrowth")
+    if eg is None:
+        eg = g("earningsQuarterlyGrowth")
+    out["eps_growth"] = round(eg * 100, 1) if eg is not None else None
+    rg = g("revenueGrowth")
+    out["rev_growth"] = round(rg * 100, 1) if rg is not None else None
+    return out
+
+
 if __name__ == "__main__":
     syms = sys.argv[1:]
     if not syms:

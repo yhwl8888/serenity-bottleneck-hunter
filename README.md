@@ -39,7 +39,7 @@ git clone https://github.com/Mrjie7205/serenity-bottleneck-hunter.git ~/.claude/
 | **30 秒看懂** | 给非从业者的主题速览(术语友好度纪律) |
 | **Step 2 · 产业链网状图** | 5 层逆向拆链,SVG 自动绘制依赖边,瓶颈节点**双规则自动判定**:漏斗型(入度≥2 出度≤1,金边)+ 枢纽型(入度≥2 出度≥2,多对多最难绕开,酒红边) |
 | **⚑ 本次行动点** | 头条位:最多 2 张行动卡(设什么警报 / 什么条件做什么)无视排序置顶——读者 10 秒拿到本次唯一要做的事 |
-| **Step 4-6 · 候选 leaderboard** | 核心区,每候选一行:🟢候选 / 🟡观望 / 🔴排除 + **水位标尺**(贴顶/高位/中位/低位/贴底 + 距高点% + 近1月/3月,人话化动量;**标尺两端标 6月低/高价、游标标现价**——定性+定量同在一根尺)+ trigger 分层(⚙ 可自动盯 / 👁 需人工)+ 行内三道闸小标 + **判定史**(同标的历史判定:旧价→今价±%、对错复盘);原型/基本面/情景/风险折叠进"详情",按 stage 从 early→extended 排序 |
+| **Step 4-6 · 候选 leaderboard** | 核心区,每候选一行:🟢候选 / 🟡观望 / 🔴排除 + **水位标尺**(贴顶/高位/中位/低位/贴底 + 距高点% + 近1月/3月,人话化动量;**标尺两端标 6月低/高价、游标标现价**——定性+定量同在一根尺)+ **第二轴(估值×基本面)**(forward P/E 轨迹 / PEG / 盈利增速 / 板块内 RS → 把高水位分流成「贵但对=盈利撑住的龙头」vs「真贴顶=纯重估」,修正"水位单轴=均值回归伪装成动量"的偏差)+ trigger 分层(⚙ 可自动盯 / 👁 需人工)+ 行内三道闸小标 + **判定史**(同标的历史判定:旧价→今价±%、对错复盘);原型/基本面/情景/风险折叠进"详情",按 stage 从 early→extended 排序 |
 | **⭐ 跨主题信号** | 本主题候选与其他已扫主题的交集 — 被多个 capex 周期同时锁定的 root 节点(⑤原型) |
 | **Step 5 · 三道闸门** | 穷尽性 A / ETF audit A+ / ticker 验证 A++ 的逐项通过情况(过/半过/不过) |
 | **Step 7 · 落地结论** | 仓位思路 + 触发器清单(什么条件下重估哪只) |
@@ -77,6 +77,7 @@ Theme → reverse supply-chain map → apply **9 "bottleneck archetypes"** → o
 | **§B 证伪条件** | 🟢 只有多头故事、没有"什么证明我错了" | 每个 🟢 必带可检验证伪,≥1 条机器可读 → 写入 `forward_picks.csv` 的 `invalidation` 列 |
 | **Alpha 反馈闭环** | 事后吹回测 / 牛市里随便选都涨 | `score_tracker.py` 量 **Alpha = 标的 − 主题 ETF**(非 raw return);最硬的是 **🟢 篮子 vs 🔴 篮子内部对照**(主题 beta 对消)|
 | **防循环论证** | 把回填的已知赢家算进"向前业绩"(曾把均α 灌水到 +90%,真实值为负) | 标 `历史种子` 的回填行强制从一切统计中剔除 |
+| **二轴判定(水位 × 估值)** | 热门板块里"水位单轴"会把刚突破的真龙头误杀成 🟡(均值回归伪装成动量) | 高水位不自动 🟡——按 forward P/E 轨迹/PEG/盈利增速/RS 分流「贵但对」vs「真贴顶」;估值多源(A股 `akshare` + 美股 `yfinance`)+ sanity 层拦异常值。曾踩:yfinance 错 forward 把华正误判 🔴,接 akshare 纠为 🟡 |
 
 ## Use / 用法
 
@@ -101,7 +102,8 @@ scripts/
   theme_etf_coverage.py          # ETF 持仓穷尽性 audit(A+ 防漏)
   ticker_truth.py                # ticker 验证/解析 API(L2)
   verify_tickers.py              # git pre-commit hook 扫描器(L3)
-  verify_report.py               # 交付契约 linter(报告交付前必跑:区块/§A§B/标尺三价/价格对账/入轨)
+  render_report.py               # 报告统一渲染引擎(克隆合格报告外壳 + 数据驱动真 chain-viz/标尺/§A§B;agent 只写薄主题 SPEC,报告没法手搓/降级)
+  verify_report.py               # 交付契约 linter(报告交付前必跑:区块/§A§B/标尺三价/价格对账/入轨/真 chain-viz/揭示类脚本)
 tracking/
   forward_picks.csv              # 向前(样本外)验证:带日期锁定的候选记录 + invalidation 证伪列
   theme_benchmark.csv            # 主题 → 基准 ETF 映射(算 Alpha 用)
@@ -113,6 +115,7 @@ tracking/
 ## Data / 数据
 
 - **Price & timing**: `scripts/price.py` 自动按 **EODHD(`EODHD_API_KEY`)→ yfinance** 顺序回退。EODHD 全球覆盖最广(海外股推荐);yfinance 无需 key,美股 OK 但非美股常有 gap。**WebSearch 一律不用于抓价格——猜测视为流程错误**。
+- **Valuation(二轴的第二轴)**: `scripts/price.py` 的 `valuation()` 多源 —— **A股 → akshare**(百度 PE-TTM + 东财券商一致预期算 forward + 东财财务增速)· **美股 → yfinance** · 缺字段互兜底 · 带 `src` 可交叉验证。估值是全 skill 最弱的数据(单源不可信),故 A股改用中国源 + sanity 层拦小基数算爆的异常值(如 +610% 增速、749x trailing)。
 - **Fundamentals & bottleneck judgment**: web research per candidate — the skill's real edge is qualitative (is it a true single-source chokepoint?), which no data feed provides.
 
 ## Validation honesty / 验证说明
